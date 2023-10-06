@@ -73,7 +73,7 @@ namespace MontBlanc
 
     // Initialize QCD time-like evolution operators and tabulated them
     const std::unique_ptr<const apfel::TabulateObject<apfel::Set<apfel::Operator>>> TabGammaij{new const apfel::TabulateObject<apfel::Set<apfel::Operator>>
-      {*(BuildDglap(InitializeDglapObjectsQCDT(*_g, _Thresholds, true), _mu0, PerturbativeOrder, Alphas)), 100, 1, 100, 3}};
+      {*(BuildDglap(InitializeDglapObjectsQCD(*_g, _Thresholds, true), _mu0, PerturbativeOrder, Alphas)), 100, 1, 100, 3}};
 
     // Zero operator
     const apfel::Operator Zero{*_g, apfel::Null{}};
@@ -104,7 +104,9 @@ namespace MontBlanc
         std::map<int, apfel::Operator> Gammaij = TabGammaij->Evaluate(Vs).GetObjects();
 
         // Get F2 objects at the scale Vs
-        const apfel::StructureFunctionObjects F2Obj = apfel::InitializeF2NCObjectsZMT(*_g, _Thresholds)(Vs, apfel::ElectroWeakCharges(Vs, true));
+        const apfel::StructureFunctionObjects F2Obj = apfel::InitializeF2NCObjectsZM(*_g, _Thresholds)(Vs, apfel::ElectroWeakCharges(Vs, true)); // HH
+        // Get F2 objects at the scale Vs // HH
+        const apfel::StructureFunctionObjects FLObj = apfel::InitializeFLNCObjectsZM(*_g, _Thresholds)(Vs, apfel::ElectroWeakCharges(Vs, true)); // HH
 
         // Get skip vector
         const std::vector<int> skip = F2Obj.skip;

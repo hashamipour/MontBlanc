@@ -12,13 +12,13 @@ namespace MontBlanc
   //_________________________________________________________________________
   NNADparameterisation::NNADparameterisation(YAML::Node const &config, std::shared_ptr<const apfel::Grid> g):
     NangaParbat::Parameterisation("NNAD", 2, {}, false),
-              _NNarchitecture(config["architecture"].as<std::vector<int>>()),
-              _NN(new nnad::FeedForwardNN<double>(_NNarchitecture, config["seed"].as<int>(), false)),
-              _Nout(_NNarchitecture.back()),
-              _Np(_NN->GetParameterNumber()),
-              _OutputFunction(config["output function"] ? config["output function"].as<int>() : 1),
-              _g(g),
-              _NNderivativeSets(_Np + 1, apfel::Set<apfel::Distribution> {apfel::DiagonalBasis{13}, std::map<int, apfel::Distribution>{}})
+    _NNarchitecture(config["architecture"].as<std::vector<int>>()),
+    _NN(new nnad::FeedForwardNN<double>(_NNarchitecture, config["seed"].as<int>(), false)),
+    _Nout(_NNarchitecture.back()),
+    _Np(_NN->GetParameterNumber()),
+    _OutputFunction(config["output function"] ? config["output function"].as<int>() : 1),
+    _g(g),
+    _NNderivativeSets(_Np + 1, apfel::Set<apfel::Distribution> {apfel::DiagonalBasis{13}, std::map<int, apfel::Distribution>{}})
   {
     this->_pars = _NN->GetParameters();
 
