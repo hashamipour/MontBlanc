@@ -11,6 +11,8 @@
 #include <NNAD/FeedForwardNN.h>
 #include <yaml-cpp/yaml.h>
 #include <NangaParbat/parameterisation.h>
+#include <NangaParbat/datahandler.h> // HH
+#include <NangaParbat/convolutiontable.h> // HH
 
 namespace MontBlanc
 {
@@ -20,7 +22,9 @@ namespace MontBlanc
     /**
      * @brief The "NNADparameterisation" constructor
      */
-    NNADparameterisation(YAML::Node const &config, std::shared_ptr<const apfel::Grid> g);
+    NNADparameterisation(YAML::Node const &config,
+                         std::shared_ptr<const apfel::Grid> g,
+                         std::vector<std::pair<NangaParbat::DataHandler*, NangaParbat::ConvolutionTable*>> DSVect); // HH
 
     std::vector<double> GetParameters() const { return _pars; }
     int GetParameterNumber()            const { return _Np; }
@@ -46,5 +50,6 @@ namespace MontBlanc
     std::shared_ptr<const apfel::Grid>           _g;
     nnad::Matrix<double>                         _Rotation;
     std::vector<apfel::Set<apfel::Distribution>> _NNderivativeSets;
+    // NangaParbat::DataHandler                    *_DH;  // HH
   };
 }
