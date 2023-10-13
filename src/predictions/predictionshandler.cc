@@ -71,7 +71,7 @@ namespace MontBlanc
     const apfel::AlphaQED alphaem{config["alphaem"]["aref"].as<double>(), config["alphaem"]["Qref"].as<double>(), _Thresholds, {0, 0, 1.777}, 0};
     const auto Alphaem = [&] (double const& mu) -> double{ return alphaem.Evaluate(mu); };
 
-    // Initialize QCD time-like evolution operators and tabulated them
+    // Initialize QCD space-like evolution operators and tabulated them
     const std::unique_ptr<const apfel::TabulateObject<apfel::Set<apfel::Operator>>> TabGammaij{new const apfel::TabulateObject<apfel::Set<apfel::Operator>>
       {*(BuildDglap(InitializeDglapObjectsQCD(*_g, _Thresholds, true), _mu0, PerturbativeOrder, Alphas)), 100, 1, 100, 3}};
 
@@ -105,7 +105,7 @@ namespace MontBlanc
 
         // Get F2 objects at the scale Vs
         const apfel::StructureFunctionObjects F2Obj = apfel::InitializeF2NCObjectsZM(*_g, _Thresholds)(Vs, apfel::ElectroWeakCharges(Vs, true)); // HH
-        // Get F2 objects at the scale Vs // HH
+        // Get FL objects at the scale Vs // HH
         const apfel::StructureFunctionObjects FLObj = apfel::InitializeFLNCObjectsZM(*_g, _Thresholds)(Vs, apfel::ElectroWeakCharges(Vs, true)); // HH
 
         // Get skip vector
@@ -129,6 +129,13 @@ namespace MontBlanc
               Ki += ( as / apfel::FourPi ) * F2Obj.C1.at(comp);
             if (PerturbativeOrder > 1)
               Ki += pow(as / apfel::FourPi, 2) * F2Obj.C2.at(comp);
+            // HH: this is Wilson for F_L
+            apfel::Set<apfel::Operator> KiL = FLObj.C0.at(comp);
+            if (PerturbativeOrder > 0)
+              KiL += ( as / apfel::FourPi ) * FLObj.C1.at(comp);
+            if (PerturbativeOrder > 1)
+              KiL += pow(as / apfel::FourPi, 2) * FLObj.C2.at(comp);
+            
 
             // Convolute coefficient functions with the evolution
             // operators
@@ -142,8 +149,9 @@ namespace MontBlanc
                     gj.insert({i, Gammaij.at(apfel::Gkj.at({i, j}))});
 
                 // Convolute distributions, combine them and return.
-                Cj.at(j) += (Ki * apfel::Set<apfel::Operator> {F2Obj.ConvBasis.at(comp), gj}).Combine();
-              }
+                Cj.at(j) += (Ki  * apfel::Set<apfel::Operator> {F2Obj.ConvBasis.at(comp), gj}).Combine();
+                Cj.at(j) += (KiL * apfel::Set<apfel::Operator> {FLObj.ConvBasis.at(comp), gj}).Combine();
+              }// y= Q2/(xs)
 
             // Update total cross sections
             xsec += apfel::GetSIATotalCrossSection(PerturbativeOrder, Vs, as, aem, _Thresholds, comp);
@@ -163,8 +171,7 @@ namespace MontBlanc
           if (!_cutmask[i])
             _FKt.push_back(apfel::Set<apfel::Operator> {_cmap, std::map<int, apfel::Operator>{}});
           else
-            _FKt.push_back(apfel::Set<apfel::Operator>
-            {(pref * apfel::GetSIATotalCrossSection(0, Vs, as, aem, _Thresholds, apfel::QuarkFlavour::TOTAL, true) / xsec ) * apfel::Set<apfel::Operator>{_cmap, Cj}});
+            _FKt.push_back(apfel::Set<apfel::Operator> {_cmap, Cj}); // HH
       }
     else if (DH.GetProcess() == NangaParbat::DataHandler::Process::SIDIS)
       {
