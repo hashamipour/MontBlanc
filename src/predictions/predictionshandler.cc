@@ -3,14 +3,14 @@
  *          Valerio Bertone: valerio.bertone@cern.ch
  */
 
-#include "NavyPier/predictionshandler.h"
+#include "MontBlanc/predictionshandler.h"
 
 #include <LHAPDF/LHAPDF.h>
 #include <apfel/zeromasscoefficientfunctionsunp_tl.h>
 
 #include <numeric>
 
-namespace NavyPier
+namespace MontBlanc
 {
   //_________________________________________________________________________
   PredictionsHandler::PredictionsHandler(YAML::Node                                     const& config,

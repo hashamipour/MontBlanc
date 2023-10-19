@@ -40,6 +40,7 @@ namespace MontBlanc
      * @brief Function that sets the input set of FFs at the initial scale
      */
     void SetInputFFs(std::function<apfel::Set<apfel::Distribution>(double const&)> const& InDistFunc);
+    void SetInputPDFs(std::function<apfel::Set<apfel::Distribution>(double const&)> const& InDistFunc);//HH
 
     /**
      * @brief Overload function of the NangaParbat::ConvolutionTable
