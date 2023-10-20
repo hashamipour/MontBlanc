@@ -30,6 +30,7 @@ configure_file(
 find_package(PkgConfig REQUIRED)
 pkg_search_module(YAML REQUIRED yaml-cpp)
 pkg_search_module(EIGEN3 REQUIRED eigen3)
+set(CMAKE_PREFIX_PATH "/home/hh/localhh")
 find_package(Ceres REQUIRED)
 include_directories(${CERES_INCLUDE_DIRS})
 pkg_search_module(GLOG REQUIRED libglog)
