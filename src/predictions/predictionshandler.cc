@@ -24,12 +24,40 @@ namespace MontBlanc
     _g(g),
     _obs(DH.GetObservable()),
     _bins(DH.GetBinning()),
-    //_qTfact(DH.GetKinematics().qTfact), // HH
+    _qTfact(DH.GetKinematics().qTfact),
     _cmap(apfel::DiagonalBasis{13})
   {
     // Set silent mode for both apfel=+ and LHAPDF;
     apfel::SetVerbosityLevel(0);
     LHAPDF::setVerbosity(0);
+
+    // Charge map used to discriminate between positive, negative and
+    // sum of charged hadrons.
+    const int charge = DH.GetCharge();
+    if (charge == 1)
+      // For positive hadrons, being them the default, the charge map
+      // is all one's
+      _ChargeMap.resize(13, 1);
+    else if (charge == -1)
+      {
+        // For negative hadrons, charge conjugation leaves the sea-like
+        // distributions (Sigma, T3, T8, ...) unchanged but changes the
+        // sign of the valence-like ones (V, V3, V8, etc.).
+        _ChargeMap.resize(13, 1);
+        for (int i = 1; i <= 6; i++)
+          _ChargeMap[2 * i] = - 1;
+      }
+    else if (charge == 0)
+      {
+        // For the sum of positive and negative hadrons, total-like
+        // distributions (Sigma, T3, T8, ...) double while valence-like
+        // distributions (V, V3, V8, etc.) cancel.
+        _ChargeMap.resize(13, 2);
+        for (int i = 1; i <= 6; i++)
+          _ChargeMap[2 * i] = 0;
+      }
+    else
+      throw std::runtime_error("[PredictionsHandler::PredictionsHandler]: Unsupported charge.");
 
     // Perturbative order
     const int PerturbativeOrder = config["perturbative order"].as<int>();
@@ -39,39 +67,104 @@ namespace MontBlanc
       {config["alphas"]["aref"].as<double>(), config["alphas"]["Qref"].as<double>(), _Thresholds, PerturbativeOrder}), 100, 0.9, 1001, 3};
     const auto Alphas = [&] (double const& mu) -> double{ return TabAlphas.Evaluate(mu); };
 
-    // Initialize QCD space-like evolution operators and tabulate them
+    // Electromagnetic coupling
+    const apfel::AlphaQED alphaem{config["alphaem"]["aref"].as<double>(), config["alphaem"]["Qref"].as<double>(), _Thresholds, {0, 0, 1.777}, 0};
+    const auto Alphaem = [&] (double const& mu) -> double{ return alphaem.Evaluate(mu); };
+
+    // Initialize QCD time-like evolution operators and tabulated them
     const std::unique_ptr<const apfel::TabulateObject<apfel::Set<apfel::Operator>>> TabGammaij{new const apfel::TabulateObject<apfel::Set<apfel::Operator>>
-      {*(BuildDglap(InitializeDglapObjectsQCD(*_g, _Thresholds, true), _mu0, PerturbativeOrder, Alphas)), 100, 1, 300, 3}};
+      {*(BuildDglap(InitializeDglapObjectsQCDT(*_g, _Thresholds, true), _mu0, PerturbativeOrder, Alphas)), 100, 1, 100, 3}};
 
     // Zero operator
     const apfel::Operator Zero{*_g, apfel::Null{}};
 
-    // Identity operator
-    const apfel::Operator Id{*_g, apfel::Identity{}};
-
     // Set cuts in the mother class
     this->_cuts = cuts;
-
-    // Overall prefactor
-    const double pref = DH.GetPrefactor();
-
-    // Center of mass energy
-    const double Vs = DH.GetKinematics().Vs;
-
-     // Electromagnetic coupling
-    const apfel::AlphaQED alphaem{config["alphaem"]["aref"].as<double>(), config["alphaem"]["Qref"].as<double>(), _Thresholds, {0, 0, 1.777}, 0};
-    const auto Alphaem = [&] (double const& mu) -> double{ return alphaem.Evaluate(mu); };
-
-    // Get fine-structure constant
-    const double aem = Alphaem(Vs);
 
     // Compute total cut mask as a product of single masks
     _cutmask.resize(_bins.size(), true);
     for (auto const& c : _cuts)
       _cutmask *= c->GetMask();
 
-    // DIS reduced cross section
-    if (DH.GetProcess() == NangaParbat::DataHandler::Process::DIS)
+    // Center of mass energy
+    const double Vs = DH.GetKinematics().Vs;
+
+    // Overall prefactor
+    const double pref = DH.GetPrefactor();
+
+    if (DH.GetProcess() == NangaParbat::DataHandler::Process::SIA)
+      {
+        // Get the strong coupling
+        const double as = Alphas(Vs);
+
+        // Get fine-structure constant
+        const double aem = Alphaem(Vs);
+
+        // Get evolution-operator objects
+        std::map<int, apfel::Operator> Gammaij = TabGammaij->Evaluate(Vs).GetObjects();
+
+        // Get F2 objects at the scale Vs
+        const apfel::StructureFunctionObjects F2Obj = apfel::InitializeF2NCObjectsZMT(*_g, _Thresholds)(Vs, apfel::ElectroWeakCharges(Vs, true));
+
+        // Get skip vector
+        const std::vector<int> skip = F2Obj.skip;
+
+        // Intialise container for the FK table
+        std::map<int, apfel::Operator> Cj;
+        for (int j = 0; j < 13; j++)
+          Cj.insert({j, Zero});
+
+        // Initialise total cross section
+        double xsec = 0;
+
+        // Loop over the quark components
+        for (apfel::QuarkFlavour comp : DH.GetTagging())
+          {
+            // Combine perturbative contributions to the coefficient
+            // functions
+            apfel::Set<apfel::Operator> Ki = F2Obj.C0.at(comp);
+            if (PerturbativeOrder > 0)
+              Ki += ( as / apfel::FourPi ) * F2Obj.C1.at(comp);
+            if (PerturbativeOrder > 1)
+              Ki += pow(as / apfel::FourPi, 2) * F2Obj.C2.at(comp);
+
+            // Convolute coefficient functions with the evolution
+            // operators
+            for (int j = 0; j < 13; j++)
+              {
+                std::map<int, apfel::Operator> gj;
+                for (int i = 0; i < 13; i++)
+                  if (apfel::Gkj.count({i, j}) == 0 || (std::find(skip.begin(), skip.end(), i) != skip.end()))
+                    gj.insert({i, Zero});
+                  else
+                    gj.insert({i, Gammaij.at(apfel::Gkj.at({i, j}))});
+
+                // Convolute distributions, combine them and return.
+                Cj.at(j) += (Ki * apfel::Set<apfel::Operator> {F2Obj.ConvBasis.at(comp), gj}).Combine();
+              }
+
+            // Update total cross sections
+            xsec += apfel::GetSIATotalCrossSection(PerturbativeOrder, Vs, as, aem, _Thresholds, comp);
+          }
+
+        // If the cross section is not normalised, set the total cross
+        // section to one.
+        if (!DH.GetNormalised())
+          xsec = 1;
+
+        // Combine coefficient functions with the total cross section
+        // prefactor, including the overall prefactor. Push the same
+        // resulting set of operators into the FK container as many
+        // times as bins. This is not optimal but more symmetric with
+        // the SIDIS case.
+        for (int i = 0; i < (int) _bins.size(); i++)
+          if (!_cutmask[i])
+            _FKt.push_back(apfel::Set<apfel::Operator> {_cmap, std::map<int, apfel::Operator>{}});
+          else
+            _FKt.push_back(apfel::Set<apfel::Operator>
+            {(pref * apfel::GetSIATotalCrossSection(0, Vs, as, aem, _Thresholds, apfel::QuarkFlavour::TOTAL, true) / xsec ) * apfel::Set<apfel::Operator>{_cmap, Cj}});
+      }
+    else if (DH.GetProcess() == NangaParbat::DataHandler::Process::DIS)
       {
         // Initialise structure-function objects. This is fast enough
         // that both NC and CC can be initialised even though only one
@@ -632,13 +725,13 @@ namespace MontBlanc
     // Construct set of distributions
     _D = apfel::Set<apfel::Distribution> {_ChargeMap * InDistFunc(_mu0)};
   }
- //_________________________________________________________________________
   void PredictionsHandler::SetInputPDFs(std::function<apfel::Set<apfel::Distribution>(double const&)> const& InDistFunc)
   {
     // Construct set of distributions
     _D = apfel::Set<apfel::Distribution> {InDistFunc(_mu0)};
 
   }
+
   //_________________________________________________________________________
   std::vector<double> PredictionsHandler::GetPredictions(std::function<double(double const&, double const&, double const&)> const&) const
   {

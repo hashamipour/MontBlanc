@@ -1,12 +1,19 @@
 dependent_variables:
 - header: {title: "XP*SIG(C=REDUCED)"}
   qualifiers:
-  - {namw: process, value:DIS}
-  - {name: ABS(T), units: GEV**2, value: < 1.0}
-  - {name: M(C=Y), units: GEV, value: < 1.6}
+  - {name: process, value: DIS}
+  - {name: observable, value: "NC reduced dsigma/dxdQ2"}
+  - {name: target_isoscalarity, value: 0.5}
   #- {name: Q**2, units: GeV^2, value: '3.5'}
-  - {name: RE, value: E+- P --> E+- X Y}
+  #- {name: RE, value: E+- P --> E+- X Y}
   #- {name: X(C=POMERON), value: '3.0E-4'}
+  - {name: prefactor, value: 1}
+  - {name: Vs, value:  319.0 , units: GeV}
+  - {name: Q, low: 1, high: 7.745966692414834, integrate: true}
+  - {name: x, low: 0.004, high: 0.4, integrate: true}
+  - {name: z, low: 0.2, high: 0.85, integrate: true}
+  - {name: hadron, value: PR}
+  - {name: charge, value: 0}
   values:
   - errors:
     - {label: stat, symerror: 0.00419289}
@@ -166,7 +173,7 @@ independent_variables:
   - {value: 0.001}
   - {value: 0.001}
   - {value: 0.001}
-- header: {name: "Q**2"}
+- header: {name: "Q2"}
   values: 
   - {value: 3.5}  
   - {value: 3.5}  
