@@ -1,0 +1,46 @@
+dependent_variables:
+  - header: {title: XP*SIG(C=REDUCED)}
+    qualifiers:
+      - {name: process, value: DIS}
+      - {name: observable, value: NC reduced dsigma/dxdQ2}
+      - {name: Vs, value: 319.0}
+      - {name: z, low: 0.2, high: 0.35, integrate: true}
+      - {name: hadron, value: PR}
+      - {name: charge, value: 1}
+    values:
+      - errors:
+          - {label: unc, value: 0.00419289}
+          - {label: add, value: 0.04}
+          - {label: mult, value: 0.05}
+        value: 0.02481
+      - errors:
+          - {label: unc, value: 0.00088426}
+          - {label: add, value: 0.04}
+          - {label: mult, value: 0.05}
+        value: 0.02327
+      - errors:
+          - {label: unc, value: 0.0011904}
+          - {label: add, value: 0.04}
+          - {label: mult, value: 0.05}
+        value: 0.0372
+independent_variables:
+  - header: {name: z}
+    values:
+      - {high: 0.25, low: 0.2, value: 0.223}
+      - {high: 0.3, low: 0.25, value: 0.274}
+      - {high: 0.35, low: 0.3, value: 0.324}
+  - header: {name: x}
+    values:
+      - {high: 0.217, low: 0.137, value: 0.17}
+      - {high: 0.35, low: 0.217, value: 0.27}
+      - {high: 0.55, low: 0.35, value: 0.43}
+  - header: {name: y}
+    values:
+      - {high: 0.5, low: 0.3, value: 0.443}
+      - {high: 0.5, low: 0.3, value: 0.435}
+      - {high: 0.5, low: 0.3, value: 0.435}
+  - header: {name: Q2}
+    values:
+      - {value: 3.5}
+      - {value: 3.5}
+      - {value: 3.5}
