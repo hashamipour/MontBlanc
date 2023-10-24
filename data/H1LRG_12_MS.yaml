@@ -1,193 +1,51 @@
 dependent_variables:
 - header: {title: "XP*SIG(C=REDUCED)"}
   qualifiers:
-    - {name: process, value: "DIS"}
-    - {name: observable, value: "NC reduced dsigma/dxdQ2"}
-    - {name: target_isoscalarity, value: -10.5}
-    - {name: prefactor, value: 1}
-    - {name: Vs, value:  319 , units: GeV}
-    - {name: Q, low: 1, high: 7.745966692414834, integrate: true}
+    - {name: process, value: DIS}
+    - {name: observable, value: NC reduced dsigma/dxdQ2}
+    #- {name: target_isoscalarity, value: 0.5}
+    #- {name: prefactor, value: 1}
+    - {name: Vs, value: 319.0}
+    #- {name: Q, low: 1, high: 1000.0, integrate: true}
     - {name: x, low: 0.004, high: 0.4, integrate: true}
-    - {name: z, low: 0.2, high: 0.85, integrate: true}
+    #- {name: z, low: 0.2, high: 0.35, integrate: false}
+    #- {name: PS_reduction, W: 5, ymin: 0.1, ymax: 0.7}
     - {name: hadron, value: PR}
-    - {name: charge, value: 0}
+    - {name: charge, value: 1}
   values:
   - errors:
-    - {label: stat, symerror: 0.00419289}
-    - {label: 'sys,unc', symerror: 0.0017367}
-    - {label: 'sys,cor', symerror: 0.00161265}
-    - {label: mult, value: 0.04}
+    - {label: unc, value: 0.00419289}
+    - {label: add, value: 0.04}
+    - {label: mult, value: 0.05}
     value: 0.02481
   - errors:
-    - {label: stat, symerror: 0.00088426}
-    - {label: 'sys,unc', symerror: 0.00051194}
-    - {label: 'sys,cor', symerror: 0.00109369}
-    - {label: mult, value: 0.04}
+    - {label: unc, value: 0.00088426}
+    - {label: add, value: 0.04}
+    - {label: mult, value: 0.05}
     value: 0.02327
   - errors:
-    - {label: stat, symerror: 0.0011904}
-    - {label: 'sys,unc', symerror: 0.0008556}
-    - {label: 'sys,cor', symerror: 0.0014508}
-    - {label: mult, value: 0.04}
+    - {label: unc, value: 0.0011904}
+    - {label: add, value: 0.04}
+    - {label: mult, value: 0.05}
     value: 0.0372
-  - errors:
-    - {label: stat, symerror: 0.0018056}
-    - {label: 'sys,unc', symerror: 0.0009272}
-    - {label: 'sys,cor', symerror: 0.002196}
-    - {label: mult, value: 0.04}
-    value: 0.0488
-  values:
-  - errors:
-    - {label: stat, symerror: 0.00175952}
-    - {label: 'sys,unc', symerror: 0.0007855}
-    - {label: 'sys,cor', symerror: 0.00163384}
-    - {label: mult, value: 0.04}
-    value: 0.03142
-  - errors:
-    - {label: stat, symerror: 0.00174135}
-    - {label: 'sys,unc', symerror: 0.00102695}
-    - {label: 'sys,cor', symerror: 0.0018753}
-    - {label: mult, value: 0.04}
-    value: 0.04465
-  - errors:
-    - {label: stat, symerror: 0.00245057}
-    - {label: 'sys,unc', symerror: 0.00131494}
-    - {label: 'sys,cor', symerror: 0.00280919}
-    - {label: mult, value: 0.04}
-    value: 0.05977
-  - errors:
-    - {label: stat, symerror: 0.00275275}
-    - {label: 'sys,unc', symerror: 0.00115115}
-    - {label: 'sys,cor', symerror: 0.00255255}
-    - {label: mult, value: 0.04}
-    value: 0.05005
-  - errors:
-    - {label: stat, symerror: 0.0032952}
-    - {label: 'sys,unc', symerror: 0.0016476}
-    - {label: 'sys,cor', symerror: 0.0032952}
-    - {label: mult, value: 0.04}
-    value: 0.06865
-  - errors:
-    - {label: stat, symerror: 0.00669992}
-    - {label: 'sys,unc', symerror: 0.0013174}
-    - {label: 'sys,cor', symerror: 0.00237132}
-    - {label: mult, value: 0.04}
-    value: 0.03764
-  - errors:
-    - {label: stat, symerror: 0.00394383}
-    - {label: 'sys,unc', symerror: 0.00186813}
-    - {label: 'sys,cor', symerror: 0.0034595}
-    - {label: mult, value: 0.04}
-    value: 0.06919
-  - errors:
-    - {label: stat, symerror: 0.00075768}
-    - {label: 'sys,unc', symerror: 0.0009471}
-    - {label: 'sys,cor', symerror: 0.003157}
-    - {label: mult, value: 0.04}
-    value: 0.06314
-  - errors:
-    - {label: stat, symerror: 0.00289805}
-    - {label: 'sys,unc', symerror: 0.00095305}
-    - {label: 'sys,cor', symerror: 0.00141985}
-    - {label: mult, value: 0.04}
-    value: 0.01945
-  - errors:
-    - {label: stat, symerror: 0.00085917}
-    - {label: 'sys,unc', symerror: 0.00046263}
-    - {label: 'sys,cor', symerror: 0.00112353}
-    - {label: mult, value: 0.04}
-    value: 0.02203
-  - errors:
-    - {label: stat, symerror: 0.00077219}
-    - {label: 'sys,unc', symerror: 0.00043827}
-    - {label: 'sys,cor', symerror: 0.00087654}
-    - {label: mult, value: 0.04}
-    value: 0.02087
-  - errors:
-    - {label: stat, symerror: 0.00080956}
-    - {label: 'sys,unc', symerror: 0.00045948}
-    - {label: 'sys,cor', symerror: 0.00089708}
-    - {label: mult, value: 0.04}
-    value: 0.02188
-  - errors:
-    - {label: stat, symerror: 0.00094392}
-    - {label: 'sys,unc', symerror: 0.00049818}
-    - {label: 'sys,cor', symerror: 0.00102258}
-    - {label: mult, value: 0.04}
-    value: 0.02622
-  - errors:
-    - {label: stat, symerror: 0.00156438}
-    - {label: 'sys,unc', symerror: 0.0008691}
-    - {label: 'sys,cor', symerror: 0.00095601}
-    - {label: mult, value: 0.04}
-    value: 0.02897
-  - errors:
-    - {label: stat, symerror: 0.00342028}
-    - {label: 'sys,unc', symerror: 0.00124794}
-    - {label: 'sys,cor', symerror: 0.00212612}
-    - {label: mult, value: 0.04}
-    value: 0.04622
 independent_variables:
-- header: {name: "x"}
+- header: {name: "z"}
   values:
-  - {high: 0.217, low: 0.137, value: 0.17}
-  - {high: 0.35, low: 0.217, value: 0.27}
-  - {high: 0.55, low: 0.35, value: 0.43}
-  - {high: 0.867, low: 0.55, value: 0.67}
-  - {high: 0.35, low: 0.217, value: 0.27}
-  - {high: 0.55, low: 0.35, value: 0.43}
-  - {high: 0.867, low: 0.55, value: 0.67}
-  - {high: 0.55, low: 0.35, value: 0.43}
-  - {high: 0.867, low: 0.55, value: 0.67}
-  - {high: 0.55, low: 0.35, value: 0.43}
-  - {high: 0.867, low: 0.55, value: 0.67}
-  - {high: 0.867, low: 0.55, value: 0.67}
-  - {high: 0.065, low: 0.041, value: 0.05}
-  - {high: 0.105, low: 0.065, value: 0.08}
-  - {high: 0.165, low: 0.105, value: 0.13}
-  - {high: 0.26, low: 0.165, value: 0.2}
-  - {high: 0.41, low: 0.26, value: 0.32}
-  - {high: 0.65, low: 0.41, value: 0.5}
-  - {high: 1.0, low: 0.65, value: 0.8}
-- header: {name: "zav"}
-  values:
-  - {value: 3.0E-4}
-  - {value: 3.0E-4}
-  - {value: 3.0E-4}
-  - {value: 3.0E-4}
-  - {value: 3.0E-4}
-  - {value: 3.0E-4}
-  - {value: 3.0E-4}
-  - {value: 3.0E-4}
-  - {value: 3.0E-4}
-  - {value: 3.0E-4}
-  - {value: 3.0E-4}
-  - {value: 3.0E-4}
-  - {value: 0.001}
-  - {value: 0.001}
-  - {value: 0.001}
-  - {value: 0.001}
-  - {value: 0.001}
-  - {value: 0.001}
-  - {value: 0.001}
+  - {value: 0.223}
+  - {value: 0.274}
+  - {value: 0.324}
+#- header: {name: "x"}
+  #values:
+  #- {value: 0.17}
+  #- {value: 0.27}
+  #- {value: 0.43}
+#- header: {name: "y"}
+  #values:
+  #- {value: 0.443}
+  #- {value: 0.435}
+  #- {value: 0.435}
 - header: {name: "Q2"}
   values: 
   - {value: 3.5}  
   - {value: 3.5}  
-  - {value: 3.5}  
-  - {value: 3.5} 
-  - {value: 5.0}   
-  - {value: 5.0}  
-  - {value: 5.0}  
-  - {value: 6.5}  
-  - {value: 6.5}  
-  - {value: 8.5}  
-  - {value: 8.5}  
-  - {value: 12.0}  
   - {value: 3.5}   
-  - {value: 3.5}   
-  - {value: 3.5}   
-  - {value: 3.5}   
-  - {value: 3.5}   
-  - {value: 3.5}   
-  - {value: 3.5}     

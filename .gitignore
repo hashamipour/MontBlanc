@@ -6,6 +6,7 @@ cmake_install.cmake
 run/CMakeFiles/
 run/cmake_install.cmake
 benchmark/APFEL
+test/
 
 # Compiled Object files
 *.slo
