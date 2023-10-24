@@ -181,6 +181,7 @@ namespace MontBlanc
         const auto FLObjCCMinus = apfel::InitializeFLCCMinusObjectsZM(*_g, _Thresholds);
         const auto F3ObjCCMinus = apfel::InitializeF3CCMinusObjectsZM(*_g, _Thresholds);
 
+        const std::vector<double> flux_factor = FractureFuncFluxFactor();// HH
         // Loop on the bins
         for (int i = 0; i < (int) _bins.size(); i++)
           {
@@ -237,7 +238,9 @@ namespace MontBlanc
                     KiFL += pow(as / apfel::FourPi, 2) * FL.C2.at(0);
                     KiF3 += pow(as / apfel::FourPi, 2) * F3.C2.at(0);
                   }
-
+                // HH: for now multiply coefficient functions with flux factor
+                KiF2 *= flux_factor[i];//HH
+                KiFL *= flux_factor[i];//HH
                 // Convolute coefficient functions with the evolution
                 // operators for F2 and FL components
                 for (int j = 0; j < 13; j++)
@@ -730,6 +733,22 @@ namespace MontBlanc
     // Construct set of distributions
     _D = apfel::Set<apfel::Distribution> {InDistFunc(_mu0)};
 
+  }
+  std::vector<double> PredictionsHandler::FractureFuncFluxFactor(){
+  std::vector<double> res;
+  double xPom = 0.0;
+  double w1   = -1.191;
+  double w2   = 0.0;
+  double w3   = 86.156;
+  double w4   = 1.773;
+  
+  for (int i = 0; i < (int) _bins.size(); i++)
+  {
+    xPom = _bins[i].zav; //HH: using "z" instead of xpom, so we don't need to change DataHendler class
+    res.push_back( pow(xPom, w1)*pow((1-xPom), w2)*(1 + w3 * pow(xPom, w4)) );
+  };
+
+  return res;
   }
 
   //_________________________________________________________________________

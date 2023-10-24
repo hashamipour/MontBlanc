@@ -7,8 +7,8 @@ dependent_variables:
     #- {name: prefactor, value: 1}
     - {name: Vs, value: 319.0}
     #- {name: Q, low: 1, high: 1000.0, integrate: true}
-    #- {name: x, low: 0.004, high: 0.4, integrate: true}
-    - {name: z, low: 0.2, high: 0.35, integrate: true}
+    - {name: x, low: 0.004, high: 0.4, integrate: true}
+    #- {name: z, low: 0.2, high: 0.35, integrate: false}
     #- {name: PS_reduction, W: 5, ymin: 0.1, ymax: 0.7}
     - {name: hadron, value: PR}
     - {name: charge, value: 1}
@@ -31,19 +31,19 @@ dependent_variables:
 independent_variables:
 - header: {name: "z"}
   values:
-  - {high: 0.25, low: 0.2, value: 0.223}
-  - {high: 0.3, low: 0.25, value: 0.274}
-  - {high: 0.35, low: 0.3, value: 0.324}
-- header: {name: "x"}
-  values:
-  - {high: 0.217, low: 0.137, value: 0.17}
-  - {high: 0.35, low: 0.217, value: 0.27}
-  - {high: 0.55, low: 0.35, value: 0.43}
-- header: {name: "y"}
-  values:
-  - {high: 0.5, low: 0.3, value: 0.443}
-  - {high: 0.5, low: 0.3, value: 0.435}
-  - {high: 0.5, low: 0.3, value: 0.435}
+  - {value: 0.223}
+  - {value: 0.274}
+  - {value: 0.324}
+#- header: {name: "x"}
+  #values:
+  #- {value: 0.17}
+  #- {value: 0.27}
+  #- {value: 0.43}
+#- header: {name: "y"}
+  #values:
+  #- {value: 0.443}
+  #- {value: 0.435}
+  #- {value: 0.435}
 - header: {name: "Q2"}
   values: 
   - {value: 3.5}  
