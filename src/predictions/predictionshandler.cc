@@ -258,18 +258,18 @@ namespace MontBlanc
 
                 // Convolute coefficient functions with the evolution
                 // operators for the F3 component
-                for (int j = 0; j < 13; j++)
-                  {
-                    std::map<int, apfel::Operator> gj;
-                    for (int i = 0; i < 13; i++)
-                      if (apfel::Gkj.count({i, j}) == 0 || (std::find(skip3.begin(), skip3.end(), i) != skip3.end()))
-                        gj.insert({i, Zero});
-                      else
-                        gj.insert({i, Gammaij.at(apfel::Gkj.at({i, j}))});
+                // for (int j = 0; j < 13; j++)
+                //   {
+                //     std::map<int, apfel::Operator> gj;
+                //     for (int i = 0; i < 13; i++)
+                //       if (apfel::Gkj.count({i, j}) == 0 || (std::find(skip3.begin(), skip3.end(), i) != skip3.end()))
+                //         gj.insert({i, Zero});
+                //       else
+                //         gj.insert({i, Gammaij.at(apfel::Gkj.at({i, j}))});
 
-                    // Convolute distributions, combine them and return.
-                    Cj.at(j) += - sign * ( Ym / Yp ) * (KiF3 * apfel::Set<apfel::Operator> {F3.ConvBasis.at(0), gj}).Combine();
-                  }
+                //     // Convolute distributions, combine them and return.
+                //     Cj.at(j) += - sign * ( Ym / Yp ) * (KiF3 * apfel::Set<apfel::Operator> {F3.ConvBasis.at(0), gj}).Combine();
+                //   }
               }
             else if (_obs == NangaParbat::DataHandler::Observable::CC_red_cs)
               {
@@ -728,16 +728,18 @@ namespace MontBlanc
     // Construct set of distributions
     _D = apfel::Set<apfel::Distribution> {_ChargeMap * InDistFunc(_mu0)};
   }
+  //_________________________________________________________________________
   void PredictionsHandler::SetInputPDFs(std::function<apfel::Set<apfel::Distribution>(double const&)> const& InDistFunc)
   {
     // Construct set of distributions
     _D = apfel::Set<apfel::Distribution> {InDistFunc(_mu0)};
 
   }
+  //_________________________________________________________________________
   std::vector<double> PredictionsHandler::FractureFuncFluxFactor(){
   std::vector<double> res;
   double xPom = 0.0;
-  double w1   = -1.191;
+  double w1   = -1.191; // HH: fixed from Khanpour2019
   double w2   = 0.0;
   double w3   = 86.156;
   double w4   = 1.773;
