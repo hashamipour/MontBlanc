@@ -14,31 +14,40 @@ dependent_variables:
     - {name: charge, value: 1}
   values:
   - errors:
-    - {label: unc, value: 0.00419289}
-    - {label: add, value: 0.04}
-    - {label: mult, value: 0.05}
-    value: 0.02481
+    - {label: unc, value: 0.00048405}
+    - {label: add, value: 0.00106491}
+    - {label: mult, value: 0.04}
+    value: 0.03227
   - errors:
-    - {label: unc, value: 0.00088426}
-    - {label: add, value: 0.04}
-    - {label: mult, value: 0.05}
-    value: 0.02327
+    - {label: unc, value: 0.000584}
+    - {label: add, value: 0.001168}
+    - {label: mult, value: 0.04}
+    value: 0.0365
   - errors:
-    - {label: unc, value: 0.0011904}
-    - {label: add, value: 0.04}
-    - {label: mult, value: 0.05}
-    value: 0.0372
+    - {label: unc, value: 0.00079884}
+    - {label: add, value: 0.00142016}
+    - {label: mult, value: 0.04}
+    value: 0.04438
+  - errors:
+    - {label: unc, value: 0.00107478}
+    - {label: add, value: 0.00225192}
+    - {label: mult, value: 0.04}
+    value: 0.05118
 independent_variables:
 - header: {name: "z"}
+# z is considered as xp
   values:
-  - {value: 0.223}
-  - {value: 0.274}
-  - {value: 0.324}
-#- header: {name: "x"}
+  - {value: 0.001}
+  - {value: 0.001}
+  - {value: 0.001}
+  - {value: 0.001}
+- header: {name: "x"}
+# x is considered as Beta
   #values:
-  #- {value: 0.17}
-  #- {value: 0.27}
-  #- {value: 0.43}
+  - {high: 0.26, low: 0.165, value: 0.2}
+  - {high: 0.41, low: 0.26, value: 0.32}
+  - {high: 0.65, low: 0.41, value: 0.5}
+  - {high: 1.0, low: 0.65, value: 0.8}
 #- header: {name: "y"}
   #values:
   #- {value: 0.443}
@@ -46,6 +55,7 @@ independent_variables:
   #- {value: 0.435}
 - header: {name: "Q2"}
   values: 
-  - {value: 3.5}  
-  - {value: 3.5}  
-  - {value: 3.5}   
+  - {value: 12}  
+  - {value: 12}  
+  - {value: 12}   
+  - {value: 12}   
