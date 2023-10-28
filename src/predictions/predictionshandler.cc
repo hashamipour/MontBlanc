@@ -8,6 +8,8 @@
 
 #include <LHAPDF/LHAPDF.h>
 #include <apfel/SIDIS.h>
+#include <apfel/set.h>// HH
+#include <apfel/operator.h>//HH
 #include <apfel/zeromasscoefficientfunctionsunp_tl.h>
 #include <numeric>
 
@@ -166,6 +168,9 @@ namespace MontBlanc
       }
     else if (DH.GetProcess() == NangaParbat::DataHandler::Process::DIS)
       {
+        // Initialize QCD Space-like evolution operators and tabulated them
+        const std::unique_ptr<const apfel::TabulateObject<apfel::Set<apfel::Operator>>> TabGammaij{new const apfel::TabulateObject<apfel::Set<apfel::Operator>>
+        {*(BuildDglap(InitializeDglapObjectsQCD(*_g, _Thresholds, true), _mu0, PerturbativeOrder, Alphas)), 100, 1, 100, 3}};
         // Initialise structure-function objects. This is fast enough
         // that both NC and CC can be initialised even though only one
         // of them will be used.
@@ -181,7 +186,7 @@ namespace MontBlanc
         const auto FLObjCCMinus = apfel::InitializeFLCCMinusObjectsZM(*_g, _Thresholds);
         const auto F3ObjCCMinus = apfel::InitializeF3CCMinusObjectsZM(*_g, _Thresholds);
 
-        const std::vector<double> flux_factor = FractureFuncFluxFactor();// HH
+        //const std::vector<double> flux_factor = FractureFuncFluxFactor();// HH
         // Loop on the bins
         for (int i = 0; i < (int) _bins.size(); i++)
           {
@@ -239,8 +244,10 @@ namespace MontBlanc
                     KiF3 += pow(as / apfel::FourPi, 2) * F3.C2.at(0);
                   }
                 // HH: for now multiply coefficient functions with flux factor
-                KiF2 *= flux_factor[i];//HH
-                KiFL *= flux_factor[i];//HH
+                //  const double fac = flux_factor.at(i);// HH
+                //  std::cout << "xPom is: "<< _bins[i].zav << " and flux is " << fac << std::endl;
+                // KiF2 *= fac;// HH
+                // KiFL *= fac;// HH
                 // Convolute coefficient functions with the evolution
                 // operators for F2 and FL components
                 for (int j = 0; j < 13; j++)
@@ -267,7 +274,7 @@ namespace MontBlanc
                 //       else
                 //         gj.insert({i, Gammaij.at(apfel::Gkj.at({i, j}))});
 
-                //     // Convolute distributions, combine them and return.
+                // //     // Convolute distributions, combine them and return.
                 //     Cj.at(j) += - sign * ( Ym / Yp ) * (KiF3 * apfel::Set<apfel::Operator> {F3.ConvBasis.at(0), gj}).Combine();
                 //   }
               }
@@ -738,18 +745,18 @@ namespace MontBlanc
   //_________________________________________________________________________
   std::vector<double> PredictionsHandler::FractureFuncFluxFactor(){
   std::vector<double> res;
-  double xPom = 0.0;
+  double xPom;
   double w1   = -1.191; // HH: fixed from Khanpour2019
-  double w2   = 0.0;
+  double w2   = 0.000 ;
   double w3   = 86.156;
-  double w4   = 1.773;
+  double w4   = 1.773 ;
   
   for (int i = 0; i < (int) _bins.size(); i++)
   {
     xPom = _bins[i].zav; //HH: using "z" instead of xpom, so we don't need to change DataHendler class
     res.push_back( pow(xPom, w1)*pow((1-xPom), w2)*(1 + w3 * pow(xPom, w4)) );
   };
-
+  
   return res;
   }
 
@@ -763,12 +770,24 @@ namespace MontBlanc
     // the initial-scale FFs and then perform the integration in
     // z. Finally Divide by the bin width in z.
     for (int id = 0; id < (int) _bins.size(); id++)
+    {
+
       if (_bins[id].Intz)
         preds[id] = (_cutmask[id] ? ((_FKt[id] * _D).Combine() * [] (double const& z) -> double{ return 1 / z; }).Integrate(_bins[id].zmin, _bins[id].zmax)
                      / ( _bins[id].zmax - _bins[id].zmin ) * _qTfact[id] : 0);
       else
         preds[id] = (_cutmask[id] ? (_FKt[id] * _D).Combine().Evaluate(_bins[id].zav) / _bins[id].zav * _qTfact[id] : 0);
+      if (_obs == NangaParbat::DataHandler::Observable::NC_red_cs)
+      {
+        if (_bins[id].Intx)
+        {
+           preds[id] = (_cutmask[id] ? ((_FKt[id] * _D).Combine()).Integrate(_bins[id].xmin, _bins[id].xmax) : 0);
+        }
+        else
+           preds[id] = (_cutmask[id] ? (_FKt[id] * _D).Combine().Evaluate(_bins[id].xav) : 0);
+      }
 
+    }
     return preds;
   }
 
