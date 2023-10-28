@@ -186,7 +186,7 @@ namespace MontBlanc
         const auto FLObjCCMinus = apfel::InitializeFLCCMinusObjectsZM(*_g, _Thresholds);
         const auto F3ObjCCMinus = apfel::InitializeF3CCMinusObjectsZM(*_g, _Thresholds);
 
-        //const std::vector<double> flux_factor = FractureFuncFluxFactor();// HH
+        const std::vector<double> flux_factor = FractureFuncFluxFactor();// HH
         // Loop on the bins
         for (int i = 0; i < (int) _bins.size(); i++)
           {
@@ -244,10 +244,10 @@ namespace MontBlanc
                     KiF3 += pow(as / apfel::FourPi, 2) * F3.C2.at(0);
                   }
                 // HH: for now multiply coefficient functions with flux factor
-                //  const double fac = flux_factor.at(i);// HH
+                 const double fac = flux_factor.at(i);// HH
                 //  std::cout << "xPom is: "<< _bins[i].zav << " and flux is " << fac << std::endl;
-                // KiF2 *= fac;// HH
-                // KiFL *= fac;// HH
+                KiF2 *= fac;// HH
+                KiFL *= fac;// HH
                 // Convolute coefficient functions with the evolution
                 // operators for F2 and FL components
                 for (int j = 0; j < 13; j++)
