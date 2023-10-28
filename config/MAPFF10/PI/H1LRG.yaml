@@ -69,7 +69,7 @@ NNAD:
 
   #             tb  bb  cb  sb  ub  db  g   d   u   s   c   b   t  # Combinations to be fitted (i.e. output of the NN):
   flavour map: [0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0, # - g
-                1,  1,  1,  1,  1,  1,  0,  1,  1,  1,  1,  1,  1] # - Sigma
+                0,  0,  0,  1,  1,  1,  0,  1,  1,  1,  0,  0,  0] # - Sigma
 
 
 #################################
