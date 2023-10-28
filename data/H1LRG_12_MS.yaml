@@ -188,25 +188,25 @@
     - {label: mult, value: 0.04}
     value: 0.04488  
   - errors:
-    - {label: unc, value: }
-    - {label: add, value: }
+    - {label: unc, value: 0.000581756}
+    - {label: add, value: 0.033}
     - {label: mult, value: 0.04}
-    value:  
+    value: 0.03227 
   - errors:
-    - {label: unc, value: }
-    - {label: add, value: }
+    - {label: unc, value: 0.000708702}
+    - {label: add, value: 0.032}
     - {label: mult, value: 0.04}
-    value:  
+    value: 0.0365 
   - errors:
-    - {label: unc, value: }
-    - {label: add, value: }
+    - {label: unc, value: 0.00101202}
+    - {label: add, value: 0.032}
     - {label: mult, value: 0.04}
-    value:  
+    value: 0.04438 
   - errors:
-    - {label: unc, value: }
-    - {label: add, value: }
+    - {label: unc, value: 0.001382807}
+    - {label: add, value: 0.044}
     - {label: mult, value: 0.04}
-    value:  
+    value: 0.05118 
   - errors:
     - {label: unc, value: }
     - {label: add, value: }
@@ -346,6 +346,10 @@
     - {value: 0.001}
     - {value: 0.001}
     - {value: 0.001}
+    - {value: 0.001}
+    - {value: 0.001}
+    - {value: 0.001}
+    - {value: 0.001}
   - header: {name: "x"}
 # x is considered as Beta
     values:
@@ -384,7 +388,11 @@
     - {high: 0.41, low: 0.26, value: 0.32}
     - {high: 0.65, low: 0.41, value: 0.5}
     - {high: 1.0, low: 0.65, value: 0.8}
-  - header: {name: "y"}
+    - {high: 0.26, low: 0.165, value: 0.2}
+    - {high: 0.41, low: 0.26, value: 0.32}
+    - {high: 0.65, low: 0.41, value: 0.5}
+    - {high: 1.0, low: 0.65, value: 0.8}
+    - header: {name: "y"}
     values:
     - {value: 0.674398355}
     - {value: 0.424621186}
@@ -421,10 +429,10 @@
     - {value: 0.261028292}
     - {value: 0.167058107}
     - {value: 0.104411317}
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
+    - {value: 0.589616847}
+    - {value: 0.36851053}
+    - {value: 0.235846739}
+    - {value: 0.147404212}
     - {value: }
     - {value: }
     - {value: }
@@ -462,4 +470,13 @@
     - {value: 6.5}   
     - {value: 6.5}    
     - {value: 6.5}   
-    - {value: 6.5}             
+    - {value: 6.5}  
+    - {value: 8.5}    
+    - {value: 8.5}    
+    - {value: 8.5}    
+    - {value: 8.5}               
+    - {value: 8.5}   
+    - {value: 12.0}   
+    - {value: 12.0}    
+    - {value: 12.0}    
+    - {value: 12.0}                 
