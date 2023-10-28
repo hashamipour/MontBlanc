@@ -273,6 +273,110 @@
     - {label: mult, value: 0.04}
     value: 0.04048 
   - errors:
+    - {label: unc, value: 0.002769769}
+    - {label: add, value: 0.071}
+    - {label: mult, value: 0.04}
+    value: 0.01604 
+  - errors:
+    - {label: unc, value: 0.00089125}
+    - {label: add, value: 0.046}
+    - {label: mult, value: 0.04}
+    value: 0.01785 
+  - errors:
+    - {label: unc, value: 0.000782932}
+    - {label: add, value: 0.034}
+    - {label: mult, value: 0.04}
+    value: 0.01585 
+  - errors:
+    - {label: unc, value: 0.000850407}
+    - {label: add, value: 0.036}
+    - {label: mult, value: 0.04}
+    value: 0.01758 
+  - errors:
+    - {label: unc, value: 0.001333804}
+    - {label: add, value: 0.033}
+    - {label: mult, value: 0.04}
+    value: 0.01841  
+  - errors:
+    - {label: unc, value: 0.001286929}
+    - {label: add, value: 0.033}
+    - {label: mult, value: 0.04}
+    value: 0.01678 
+  - errors:
+    - {label: unc, value: 0.001992269}
+    - {label: add, value: 0.046}
+    - {label: mult, value: 0.04}
+    value: 0.02215
+  - errors:
+    - {label: unc, value: 0.001497035}
+    - {label: add, value: 0.047}
+    - {label: mult, value: 0.04}
+    value: 0.02143 
+  - errors:
+    - {label: unc, value: 0.00115148}
+    - {label: add, value: 0.039}
+    - {label: mult, value: 0.04}
+    value: 0.02163 
+  - errors:
+    - {label: unc, value: 0.00100771}
+    - {label: add, value: 0.035}
+    - {label: mult, value: 0.04}
+    value: 0.01994 
+  - errors:
+    - {label: unc, value: 0.00092812}
+    - {label: add, value: 0.034}
+    - {label: mult, value: 0.04}
+    value: 0.01834  
+  - errors:
+    - {label: unc, value: 0.001018372}
+    - {label: add, value: 0.035}
+    - {label: mult, value: 0.04}
+    value: 0.02068 
+  - errors:
+    - {label: unc, value: 0.001145152}
+    - {label: add, value: 0.035}
+    - {label: mult, value: 0.04}
+    value: 0.02472 
+  - errors:
+    - {label: unc, value: 0.003267549}
+    - {label: add, value: 0.056}
+    - {label: mult, value: 0.04}
+    value: 0.02922
+  - errors:
+    - {label: unc, value: 0.001741438}
+    - {label: add, value: 0.038}
+    - {label: mult, value: 0.04}
+    value: 0.02452 
+  - errors:
+    - {label: unc, value: 0.001314532}
+    - {label: add, value: 0.034}
+    - {label: mult, value: 0.04}
+    value: 0.0206 
+  - errors:
+    - {label: unc, value: 0.00127431}
+    - {label: add, value: 0.034}
+    - {label: mult, value: 0.04}
+    value: 0.02079 
+  - errors:
+    - {label: unc, value: 0.001110633}
+    - {label: add, value: 0.033}
+    - {label: mult, value: 0.04}
+    value: 0.0188 
+  - errors:
+    - {label: unc, value: 0.001272392}
+    - {label: add, value: 0.034}
+    - {label: mult, value: 0.04}
+    value: 0.02256 
+  - errors:
+    - {label: unc, value: 0.001609769}
+    - {label: add, value: 0.035}
+    - {label: mult, value: 0.04}
+    value: 0.02785 
+  - errors:
+    - {label: unc, value: }
+    - {label: add, value: }
+    - {label: mult, value: 0.04}
+    value:      
     - {label: unc, value: }
     - {label: add, value: }
     - {label: mult, value: 0.04}
@@ -306,7 +410,7 @@
     - {label: unc, value: }
     - {label: add, value: }
     - {label: mult, value: 0.04}
-    value:   
+    value:                
   independent_variables:
   - header: {name: "z"}
 # z is considered as xp
@@ -363,6 +467,26 @@
     - {value: 0.001}
     - {value: 0.001}
     - {value: 0.001}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
   - header: {name: "x"}
 # x is considered as Beta
     values:
@@ -418,6 +542,27 @@
     - {high: 0.65, low: 0.41, value: 0.5}
     - {high: 1.0, low: 0.65, value: 0.8}
     - {high: 1.0, low: 0.65, value: 0.8}
+    - {high: 0.022, low: 0.014, value: 0.017}
+    - {high: 0.035, low: 0.022, value: 0.027}
+    - {high: 0.055, low: 0.035, value: 0.043}
+    - {high: 0.087, low: 0.055, value: 0.067}
+    - {high: 0.137, low: 0.087, value: 0.11}
+    - {high: 0.217, low: 0.137, value: 0.17}
+    - {high: 0.35, low: 0.217, value: 0.27}
+    - {high: 0.035, low: 0.022, value: 0.027}
+    - {high: 0.055, low: 0.035, value: 0.043}
+    - {high: 0.087, low: 0.055, value: 0.067}
+    - {high: 0.137, low: 0.087, value: 0.11}
+    - {high: 0.217, low: 0.137, value: 0.17}
+    - {high: 0.35, low: 0.217, value: 0.27}
+    - {high: 0.55, low: 0.35, value: 0.43}
+    - {high: 0.055, low: 0.035, value: 0.043}
+    - {high: 0.087, low: 0.055, value: 0.067}
+    - {high: 0.137, low: 0.087, value: 0.11}
+    - {high: 0.217, low: 0.137, value: 0.17}
+    - {high: 0.35, low: 0.217, value: 0.27}
+    - {high: 0.55, low: 0.35, value: 0.43}
+
     - header: {name: "y"}
     values:
     - {value: 0.674398355}
@@ -472,6 +617,30 @@
     - {value: 0.687886322}
     - {value: 0.429928951}
     - {value: 0.552765794}
+    - {value: 0.674398355}
+    - {value: 0.424621186}
+    - {value: 0.266622605}
+    - {value: 0.171116}
+    - {value: 0.1042252}
+    - {value: 0.067439835}
+    - {value: 0.042462119}
+    - {value: 0.606601695}
+    - {value: 0.380889436}
+    - {value: 0.244451429}
+    - {value: 0.148893143}
+    - {value: 0.096342622}
+    - {value: 0.060660169}
+    - {value: 0.038088944}
+    - {value: 0.495156267}
+    - {value: 0.317786858}
+    - {value: 0.193561086}
+    - {value: 0.125245409}
+    - {value: 0.07885822}
+    - {value: 0.049515627}
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
     - {value: }
     - {value: }
     - {value: }
@@ -538,4 +707,24 @@
     - {value: 25.0}    
     - {value: 35.0}   
     - {value: 35.0}    
-    - {value: 45.0}                     
+    - {value: 45.0} 
+    - {value: 3.5}  
+    - {value: 3.5}  
+    - {value: 3.5}   
+    - {value: 3.5}  
+    - {value: 3.5}  
+    - {value: 3.5}  
+    - {value: 3.5}   
+    - {value: 5.0}  
+    - {value: 5.0}    
+    - {value: 5.0}    
+    - {value: 5.0}  
+    - {value: 5.0}    
+    - {value: 5.0}    
+    - {value: 5.0}   
+    - {value: 6.5}    
+    - {value: 6.5}   
+    - {value: 6.5}    
+    - {value: 6.5}   
+    - {value: 6.5}    
+    - {value: 6.5}                         
