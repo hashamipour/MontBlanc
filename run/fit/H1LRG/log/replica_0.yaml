@@ -39293,3 +39293,15 @@
 - {iteration: 9998, training chi2: 7.011479977237669, validation chi2: 62.800637347041835}
 - {iteration: 9999, training chi2: 7.0112718163776773, validation chi2: 62.76370100202152}
 - {iteration: 10000, training chi2: 7.0110619655949717, validation chi2: 62.72605360328523}
+- {iteration: 0, training chi2: 1017368683.8187928, validation chi2: 1597449778.1994078}
+- {iteration: 1, training chi2: 52961548.174343906, validation chi2: 81383094.826928601}
+- {iteration: 2, training chi2: 8873002.6888917368, validation chi2: 13694651.126072327}
+- {iteration: 3, training chi2: 1854820.4994186489, validation chi2: 2887851.2579623698}
+- {iteration: 5, training chi2: 172567.02346119835, validation chi2: 241855.90092932139}
+- {iteration: 6, training chi2: 11007.909528661519, validation chi2: 18314.509847497367}
+- {iteration: 10, training chi2: 2051.7322883524025, validation chi2: 2419.8390977540143}
+- {iteration: 11, training chi2: 156.12258823315099, validation chi2: 142.15311922293674}
+- {iteration: 12, training chi2: 102.531903147346, validation chi2: 154.86721667011039}
+- {iteration: 13, training chi2: 93.981284814237085, validation chi2: 102.96834643891572}
+- {iteration: 18, training chi2: 84.151518650852367, validation chi2: 94.537086116429919}
+- {iteration: 21, training chi2: 84.137095988716936, validation chi2: 94.273413554165941}
