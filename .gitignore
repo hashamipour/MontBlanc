@@ -858,3 +858,7 @@ run/fit/HERA15/plot.py
 data/.H1LRG_12_MS.yaml.kate-swp
 run/fit/H1LRG/log/replica_0.yaml
 run/fit/H1LRG/log/replica_0.yaml
+run/fit/H1LRG/log/replica_0.yaml
+run/fit/H1LRG/config.yaml
+run/fit/H1LRG/data/H1LRG_12_HH.yaml
+run/fit/H1LRG/log/replica_0.yaml
