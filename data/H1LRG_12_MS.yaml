@@ -2013,6 +2013,8 @@ independent_variables:
     - {value: 45.0}   
     - {value: 45.0}      
     - {value: 45.0}      
+    - {value: 60.0}     
+    - {value: 60.0}
     - {value: 90.0} 
     - {value: 3.5 }  
     - {value: 3.5 }  
