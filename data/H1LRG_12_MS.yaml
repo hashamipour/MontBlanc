@@ -464,6 +464,145 @@ dependent_variables:
     - {label: mult, value: 0.04       }
     value: 0.04031 
   - errors:
+    - {label: unc , value: 0.000628009}
+    - {label: add , value: 0.033}
+    - {label: mult, value: 0.04       }
+    value: 0.02754  
+  - errors:
+    - {label: unc , value: 0.0005992}
+    - {label: add , value: 0.032}
+    - {label: mult, value: 0.04       }
+    value: 0.02996 
+  - errors:
+    - {label: unc , value: 0.000613547}
+    - {label: add , value: 0.030}
+    - {label: mult, value: 0.04       }
+    value: 0.03194 
+  - errors:
+    - {label: unc , value: 0.00074587}
+    - {label: add , value: 0.031}
+    - {label: mult, value: 0.04       }
+    value: 0.03618 
+  - errors:
+    - {label: unc , value: 0.000945747}
+    - {label: add , value: 0.033}
+    - {label: mult, value: 0.04       }
+    value: 0.03927
+    - {label: unc , value: }
+    - {label: add , value: }
+    - {label: mult, value: 0.04       }
+    value:      
+    - {label: unc , value: }
+    - {label: add , value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc , value: }
+    - {label: add , value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc , value: }
+    - {label: add , value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc , value: }
+    - {label: add , value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc , value: }
+    - {label: add , value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc , value: }
+    - {label: add , value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc , value: }
+    - {label: add , value: }
+    - {label: mult, value: 0.04       }
+    value: 
+    - {label: unc , value: }
+    - {label: add , value: }
+    - {label: mult, value: 0.04       }
+    value:      
+    - {label: unc , value: }
+    - {label: add , value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc , value: }
+    - {label: add , value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value: }
+    - {label: add, value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value: }
+    - {label: add, value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value: }
+    - {label: add, value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value: }
+    - {label: add, value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value: }
+    - {label: add, value: }
+    - {label: mult, value: 0.04       }
+    value: 
+    - {label: unc, value: }
+    - {label: add, value: }
+    - {label: mult, value: 0.04       }
+    value:      
+    - {label: unc, value: }
+    - {label: add, value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value: }
+    - {label: add, value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value: }
+    - {label: add, value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value: }
+    - {label: add, value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value: }
+    - {label: add, value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value: }
+    - {label: add, value: }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value: }
+    - {label: add, value: }
+    - {label: mult, value: 0.04       }
+    value: 
+  - errors:
     - {label: unc , value: }
     - {label: add , value: }
     - {label: mult, value: 0.04       }
@@ -601,7 +740,7 @@ dependent_variables:
     - {label: unc, value: }
     - {label: add, value: }
     - {label: mult, value: 0.04       }
-    value:                
+    value:                               
 independent_variables:
   - header: {name: "z"}
 # z is considered as xp
@@ -667,6 +806,11 @@ independent_variables:
     - {value: 0.003 }
     - {value: 0.003 }
     - {value: 0.003 } 
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
     - {value: 0.003 }
     - {value: 0.003 }
     - {value: 0.003 }
@@ -791,6 +935,11 @@ independent_variables:
     - {high: 0.35, low: 0.217, value: 0.27}
     - {high: 0.55, low: 0.35, value: 0.43}
     - {high: 0.867, low: 0.55, value: 0.67}
+    - {high: 0.137, low: 0.087, value: 0.11}
+    - {high: 0.217, low: 0.137, value: 0.17}
+    - {high: 0.35, low: 0.217, value: 0.27}
+    - {high: 0.55, low: 0.35, value: 0.43}
+    - {high: 0.867, low: 0.55, value: 0.67}
    - header: {name: "y"}
     values:
     - {value: 0.674398355}
@@ -884,6 +1033,51 @@ independent_variables:
     - {value: 0.181980508}
     - {value: 0.114266831}
     - {value: 0.073335429}
+    - {value: 0.595572573}
+    - {value: 0.385370488}
+    - {value: 0.242640678}
+    - {value: 0.152355775}
+    - {value: 0.097780572}
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
     - {value: }
     - {value: }
     - {value: }
@@ -991,4 +1185,9 @@ independent_variables:
     - {value: 15.0}   
     - {value: 15.0}     
     - {value: 15.0}  
-    - {value: 15.0} 
+    - {value: 15.0}    
+    - {value: 20.0}   
+    - {value: 20.0}    
+    - {value: 20.0}      
+    - {value: 20.0}   
+    - {value: 20.0}  
