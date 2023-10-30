@@ -17,7 +17,7 @@ dependent_variables:
     - {label: unc , value: 0.004538332}
     - {label: add , value: 0.065      }
     - {label: mult, value: 0.04       }
-    value: 0.03227
+    value: 0.02481
   - errors:
     - {label: unc , value: 0.001021762}
     - {label: add , value: 0.047      }

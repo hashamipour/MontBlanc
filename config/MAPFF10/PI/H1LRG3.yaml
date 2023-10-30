@@ -45,7 +45,7 @@ Optimizer:
 #################################
 NNAD:
   # Initialisation seed
-  seed: 1234
+  seed: 9583
 
   # Architecture
   architecture: [1, 20, 2]
