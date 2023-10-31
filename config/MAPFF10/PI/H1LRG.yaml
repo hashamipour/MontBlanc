@@ -45,7 +45,7 @@ Optimizer:
 #################################
 NNAD:
   # Initialisation seed
-  seed: 2152
+  seed: 2131
 
   # Architecture
   architecture: [1, 20, 2]
@@ -92,7 +92,7 @@ Data:
   # (e.g. zcut) and the allowed range.
   sets:
 
-   - {name: "H1LRG_12_MS",         file: "H1LRG_12_MS.yaml",        cuts: [{name: Qcut, min: 3.0 , max: 100000.0}], training fraction: 0.8}
+   - {name: "H1LRG_12_MS",         file: "H1LRG_12_MS.yaml",        cuts: [{name: Qcut, min: 3.00 , max: 100000.0}], training fraction: 0.8}
    #- {name: "BABAR prompt $\\pi^\\pm$",  file: "BABAR_PI_PLUS_MINUS_PROMPT.yaml", cuts: [{name: zcut, min: 0.076, max: 0.9}], training fraction: 0.5}
    #- {name: "TASSO 12 GeV $\\pi^\\pm$",  file: "TASSO_12_PI_PLUS_MINUS.yaml",     cuts: [{name: zcut, min: 0.075, max: 0.9}], training fraction: 0.5}
    #- {name: "TASSO 14 GeV $\\pi^\\pm$",  file: "TASSO_14_PI_PLUS_MINUS.yaml",     cuts: [{name: zcut, min: 0.075, max: 0.9}], training fraction: 0.5}
