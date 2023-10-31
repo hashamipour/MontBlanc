@@ -974,30 +974,30 @@ dependent_variables:
     - {label: mult, value: 0.04       }
     value: 0.0196 
   - errors:
-    - {label: unc, value:             }
-    - {label: add, value:             }
+    - {label: unc, value: 0.005631701 }
+    - {label: add, value: 0.087            }
     - {label: mult, value: 0.04       }
-    value:  
+    value: 0.01919
   - errors:
-    - {label: unc, value:             }
-    - {label: add, value:             }
+    - {label: unc, value: 0.004626122             }
+    - {label: add, value: 0.086            }
     - {label: mult, value: 0.04       }
-    value:  
+    value: 0.02575 
   - errors:
-    - {label: unc, value:             }
-    - {label: add, value:             }
+    - {label: unc, value: 0.004130819            }
+    - {label: add, value: 0.078            }
     - {label: mult, value: 0.04       }
-    value:  
+    value:  0.02418
   - errors:
-    - {label: unc, value:             }
-    - {label: add, value:             }
+    - {label: unc, value: 0.00343094             }
+    - {label: add, value: 0.069            }
     - {label: mult, value: 0.04       }
-    value:  
+    value: 0.0203 
   - errors:
-    - {label: unc, value:             }
-    - {label: add, value:             }
+    - {label: unc, value: 0.003190702            }
+    - {label: add, value: 0.068            }
     - {label: mult, value: 0.04       }
-    value:  
+    value: 0.01811 
   - errors:
     - {label: unc, value:             }
     - {label: add, value:             }
@@ -1204,6 +1204,11 @@ independent_variables:
     - {value: 0.01  }
     - {value: 0.01  }
     - {value: 0.01  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
   - header: {name: "x"}
 # x is considered as Beta
     values:
@@ -1399,6 +1404,11 @@ independent_variables:
     - {high: 0.65 , low: 0.41 , value: 0.5  }
     - {high: 1.0  , low: 0.65 , value: 0.8  }
     - {high: 1.0  , low: 0.65 , value: 0.8  }
+    - {high: 0.002, low: 0.001, value: 0.0017}
+    - {high: 0.004, low: 0.002, value: 0.0027}
+    - {high: 0.005, low: 0.004, value: 0.0043}
+    - {high: 0.009, low: 0.005, value: 0.0067}
+    - {high: 0.014, low: 0.009, value: 0.011}
   - header: {name: "y"}
     values:
     - {value: 0.674398355}
@@ -1593,6 +1603,12 @@ independent_variables:
     - {value: 0.393077898}
     - {value: 0.245673686}
     - {value: 0.491347373}
+    - {value: 0.674398355}
+    - {value: 0.424621186}
+    - {value: 0.266622605}
+    - {value: 0.171116}
+    - {value: 0.1042252}
+    - {value: }
   - header: {name: "Q2"}
     values: 
     - {value: 3.5  }  
@@ -1787,3 +1803,8 @@ independent_variables:
     - {value: 200.0}        
     - {value: 200.0}         
     - {value: 400.0}
+    - {value: 3.5  }  
+    - {value: 3.5  }  
+    - {value: 3.5  }   
+    - {value: 3.5  }   
+    - {value: 3.5  }   
