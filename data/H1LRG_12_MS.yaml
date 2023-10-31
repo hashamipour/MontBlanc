@@ -973,6 +973,41 @@ dependent_variables:
     - {label: add, value: 0.096       }
     - {label: mult, value: 0.04       }
     value: 0.0196 
+  - errors:
+    - {label: unc, value:             }
+    - {label: add, value:             }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value:             }
+    - {label: add, value:             }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value:             }
+    - {label: add, value:             }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value:             }
+    - {label: add, value:             }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value:             }
+    - {label: add, value:             }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value:             }
+    - {label: add, value:             }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value:             }
+    - {label: add, value:             }
+    - {label: mult, value: 0.04       }
+    value:  
 independent_variables:
   - header: {name: "z"}
 # z is considered as xp
