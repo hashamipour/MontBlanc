@@ -975,37 +975,77 @@ dependent_variables:
     value: 0.0196 
   - errors:
     - {label: unc, value: 0.005631701 }
-    - {label: add, value: 0.087            }
+    - {label: add, value: 0.087       }
     - {label: mult, value: 0.04       }
     value: 0.01919
   - errors:
-    - {label: unc, value: 0.004626122             }
-    - {label: add, value: 0.086            }
+    - {label: unc, value: 0.004626122 }
+    - {label: add, value: 0.086       }
     - {label: mult, value: 0.04       }
     value: 0.02575 
   - errors:
-    - {label: unc, value: 0.004130819            }
-    - {label: add, value: 0.078            }
+    - {label: unc, value: 0.004130819 }
+    - {label: add, value: 0.078       }
     - {label: mult, value: 0.04       }
     value:  0.02418
   - errors:
-    - {label: unc, value: 0.00343094             }
-    - {label: add, value: 0.069            }
+    - {label: unc, value: 0.00343094  }
+    - {label: add, value: 0.069       }
     - {label: mult, value: 0.04       }
     value: 0.0203 
   - errors:
-    - {label: unc, value: 0.003190702            }
-    - {label: add, value: 0.068            }
+    - {label: unc, value: 0.003190702 }
+    - {label: add, value: 0.068       }
     - {label: mult, value: 0.04       }
     value: 0.01811 
   - errors:
-    - {label: unc, value:             }
-    - {label: add, value:             }
+    - {label: unc, value: 0.007962706 }
+    - {label: add, value: 0.143       }
+    - {label: mult, value: 0.04       }
+    value: 0.03776
+  - errors:
+    - {label: unc, value: 0.005717297 }
+    - {label: add, value: 0.063       }
+    - {label: mult, value: 0.04       }
+    value: 0.03206 
+  - errors:
+    - {label: unc, value: 0.004812481 }
+    - {label: add, value: 0.071       }
+    - {label: mult, value: 0.04       }
+    value: 0.02984 
+  - errors:
+    - {label: unc, value: 0.004023878  }
+    - {label: add, value: 0.064        }
+    - {label: mult, value: 0.04       }
+    value: 0.02269 
+  - errors:
+    - {label: unc, value: 0.003601609 }
+    - {label: add, value: 0.073       }
+    - {label: mult, value: 0.04       }
+    value: 0.02157 
+  - errors:
+    - {label: unc, value:   }
+    - {label: add, value:         }
     - {label: mult, value: 0.04       }
     value:  
   - errors:
-    - {label: unc, value:             }
-    - {label: add, value:             }
+    - {label: unc, value:   }
+    - {label: add, value:         }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value:   }
+    - {label: add, value:         }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value:   }
+    - {label: add, value:         }
+    - {label: mult, value: 0.04       }
+    value:  
+  - errors:
+    - {label: unc, value:   }
+    - {label: add, value:         }
     - {label: mult, value: 0.04       }
     value:  
 independent_variables:
@@ -1204,6 +1244,11 @@ independent_variables:
     - {value: 0.01  }
     - {value: 0.01  }
     - {value: 0.01  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
     - {value: 0.03  }
     - {value: 0.03  }
     - {value: 0.03  }
@@ -1409,6 +1454,11 @@ independent_variables:
     - {high: 0.005, low: 0.004, value: 0.0043}
     - {high: 0.009, low: 0.005, value: 0.0067}
     - {high: 0.014, low: 0.009, value: 0.011}
+    - {high: 0.004, low: 0.002, value: 0.0027}
+    - {high: 0.005, low: 0.004, value: 0.0043}
+    - {high: 0.009, low: 0.005, value: 0.0067}
+    - {high: 0.014, low: 0.009, value: 0.011}
+    - {high: 0.022, low: 0.014, value: 0.017}
   - header: {name: "y"}
     values:
     - {value: 0.674398355}
@@ -1608,7 +1658,11 @@ independent_variables:
     - {value: 0.266622605}
     - {value: 0.171116}
     - {value: 0.1042252}
-    - {value: }
+    - {value: 0.606601695}
+    - {value: 0.380889436}
+    - {value: 0.244451429}
+    - {value: 0.148893143}
+    - {value: 0.096342622}
   - header: {name: "Q2"}
     values: 
     - {value: 3.5  }  
@@ -1808,3 +1862,8 @@ independent_variables:
     - {value: 3.5  }   
     - {value: 3.5  }   
     - {value: 3.5  }   
+    - {value: 5.0  }  
+    - {value: 5.0  }    
+    - {value: 5.0  }    
+    - {value: 5.0  }  
+    - {value: 5.0  }     
