@@ -75,7 +75,7 @@ namespace MontBlanc
 
     // Initialize QCD time-like evolution operators and tabulated them
     const std::unique_ptr<const apfel::TabulateObject<apfel::Set<apfel::Operator>>> TabGammaij{new const apfel::TabulateObject<apfel::Set<apfel::Operator>>
-      {*(BuildDglap(InitializeDglapObjectsQCDT(*_g, _Thresholds, true), _mu0, PerturbativeOrder, Alphas)), 100, 1, 100, 3}};
+      {*(BuildDglap(InitializeDglapObjectsQCD(*_g, _Thresholds, true), _mu0, PerturbativeOrder, Alphas)), 100, 1, 100, 3}};
 
     // Zero operator
     const apfel::Operator Zero{*_g, apfel::Null{}};
@@ -169,8 +169,8 @@ namespace MontBlanc
     else if (DH.GetProcess() == NangaParbat::DataHandler::Process::DIS)
       {
         // Initialize QCD Space-like evolution operators and tabulated them
-        const std::unique_ptr<const apfel::TabulateObject<apfel::Set<apfel::Operator>>> TabGammaij{new const apfel::TabulateObject<apfel::Set<apfel::Operator>>
-        {*(BuildDglap(InitializeDglapObjectsQCD(*_g, _Thresholds, true), _mu0, PerturbativeOrder, Alphas)), 100, 1, 100, 3}};
+        // const std::unique_ptr<const apfel::TabulateObject<apfel::Set<apfel::Operator>>> TabGammaij{new const apfel::TabulateObject<apfel::Set<apfel::Operator>>
+        // {*(BuildDglap(InitializeDglapObjectsQCD(*_g, _Thresholds, true), _mu0, PerturbativeOrder, Alphas)), 100, 1, 100, 3}};
         // Initialise structure-function objects. This is fast enough
         // that both NC and CC can be initialised even though only one
         // of them will be used.
@@ -745,16 +745,16 @@ namespace MontBlanc
   //_________________________________________________________________________
   std::vector<double> PredictionsHandler::FractureFuncFluxFactor(){
   std::vector<double> res;
-  double xPom;
-  double w1   = -1.191; // HH: fixed from Khanpour2019
-  double w2   = 0.000 ;
+  double xPom; // HH: fixed from Khanpour2019
+  double w1   = -1.191 ;
+  // double w2   = 0.000 ;
   double w3   = 86.156;
   double w4   = 1.773 ;
   
   for (int i = 0; i < (int) _bins.size(); i++)
   {
     xPom = _bins[i].zav; //HH: using "z" instead of xpom, so we don't need to change DataHendler class
-    res.push_back( pow(xPom, w1)*pow((1-xPom), w2)*(1 + w3 * pow(xPom, w4)) );
+    res.push_back( xPom * pow(xPom, w1 )*(1 + w3 * pow(xPom, w4)) );// an additional "xPom" is multiplied to get  "xPom*XSection"
   };
   
   return res;
