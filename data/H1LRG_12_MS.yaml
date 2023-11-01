@@ -1254,10 +1254,35 @@ dependent_variables:
     - {label: mult, value: 0.04       }
     value: 0.0284
   - errors:
-    - {label: unc, value:    }
-    - {label: add, value:          }
+    - {label: unc, value: 0.008595086   }
+    - {label: add, value: 0.049         }
     - {label: mult, value: 0.04       }
-    value: 
+    value: 0.05064
+  - errors:
+    - {label: unc, value: 0.005812934   }
+    - {label: add, value: 0.044         }
+    - {label: mult, value: 0.04       }
+    value: 0.04048
+  - errors:
+    - {label: unc, value: 0.005844435   }
+    - {label: add, value: 0.061         }
+    - {label: mult, value: 0.04       }
+    value: 0.03804
+  - errors:
+    - {label: unc, value: 0.003529262   }
+    - {label: add, value: 0.066         }
+    - {label: mult, value: 0.04       }
+    value: 0.02427
+  - errors:
+    - {label: unc, value: 0.003590191   }
+    - {label: add, value: 0.071         }
+    - {label: mult, value: 0.04       }
+    value: 0.02521
+  - errors:
+    - {label: unc, value: 0.003030152   }
+    - {label: add, value: 0.065         }
+    - {label: mult, value: 0.04       }
+    value: 0.02092
   - errors:
     - {label: unc, value:    }
     - {label: add, value:          }
@@ -1474,6 +1499,12 @@ independent_variables:
     - {value: 0.01  }
     - {value: 0.01  }
     - {value: 0.01  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
     - {value: 0.03  }
     - {value: 0.03  }
     - {value: 0.03  }
@@ -1781,6 +1812,13 @@ independent_variables:
     - {high: 0.137, low: 0.087, value: 0.11}
     - {high: 0.217, low: 0.137, value: 0.17}
     - {high: 0.35, low: 0.217, value: 0.27}
+    - {high: 0.035, low: 0.022, value: 0.027}
+    - {high: 0.055, low: 0.035, value: 0.043}
+    - {high: 0.087, low: 0.055, value: 0.067}
+    - {high: 0.137, low: 0.087, value: 0.11}
+    - {high: 0.217, low: 0.137, value: 0.17}
+    - {high: 0.35, low: 0.217, value: 0.27}
+
   - header: {name: "y"}
     values:
     - {value: 0.674398355}
@@ -2031,6 +2069,20 @@ independent_variables:
     - {value: 0.1042252}
     - {value: 0.067439835}
     - {value: 0.042462119}
+    - {value: 0.545941525}
+    - {value: 0.342800493}
+    - {value: 0.220006286}
+    - {value: 0.134003829}
+    - {value: 0.08670836}
+    - {value: 0.054594153}
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
   - header: {name: "Q2"}
     values: 
     - {value: 3.5  }  
@@ -2280,4 +2332,10 @@ independent_variables:
     - {value: 35.0 }      
     - {value: 35.0 }     
     - {value: 35.0 }      
-    - {value: 35.0 }                        
+    - {value: 35.0 }    
+    - {value: 45.0 }   
+    - {value: 45.0 }      
+    - {value: 45.0 }       
+    - {value: 45.0 }   
+    - {value: 45.0 }      
+    - {value: 45.0 }                            
