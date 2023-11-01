@@ -1,17 +1,17 @@
 dependent_variables:
 - header: {title: XP*SIG(C=REDUCED)}
   qualifiers:
-    - {name: process                        , value: DIS  }
-    - {name: observable, value: NC reduced dsigma/dxdQ2   }
-    - {name: target_isoscalarity            , value: 1    }
-    - {name: prefactor                      , value: 1    }
-    - {name: Vs                             , value: 319.0}
-    - {name: Q, low: 1  , high: 1000.0, integrate: false  }
-    - {name: x, low: 0.2, high: 0.8   , integrate: false  }
-    - {name: z, low: 0.2, high: 0.35  , integrate: false  }
-    - {name: PS_reduction, W: 5, ymin: 0.1, ymax: 0.7     }
-    - {name: hadron                         , value: PR   }
-    - {name: charge                         , value: 1    }
+    - {name: process                        , value: DIS       }
+    - {name: observable, value: NC reduced dsigma/dxdQ2        }
+    - {name: target_isoscalarity            , value: 1         }
+    - {name: prefactor                      , value: 1         }
+    - {name: Vs                             , value: 101761.0  }
+    - {name: Q, low: 1.87 , high: 40.0      , integrate: false }
+    - {name: x, low: 0.001, high: 1.0       , integrate: false }
+    - {name: z, low: 0.0003  , high: 0.03   , integrate: false }
+    #- {name: PS_reduction , W: 5, ymin: 0.1 , ymax: 0.7        }
+    - {name: hadron                         , value: PR        }
+    - {name: charge                         , value: 1         }
   values:
   - errors:
     - {label: unc , value: 0.004538332}
@@ -27,12 +27,12 @@ dependent_variables:
     - {label: unc , value: 0.001465982}
     - {label: add , value: 0.039      }
     - {label: mult, value: 0.04       }
-    value: 0.0372
+    value: 0.03720
   - errors:
     - {label: unc , value: 0.002029752}
     - {label: add , value: 0.045      }
     - {label: mult, value: 0.04       }
-    value: 0.0488
+    value: 0.04880
   - errors:
     - {label: unc , value: 0.001926894}
     - {label: add , value: 0.052      }  
@@ -132,7 +132,7 @@ dependent_variables:
     - {label: unc , value: 0.001544618}
     - {label: add , value: 0.033      }
     - {label: mult, value: 0.04       }
-    value: 0.0357
+    value: 0.03570
   - errors:
     - {label: unc , value: 0.002260154}
     - {label: add , value: 0.054      }
@@ -157,7 +157,7 @@ dependent_variables:
     - {label: unc , value: 0.001776795}
     - {label: add , value: 0.035      }
     - {label: mult, value: 0.04       }
-    value: 0.0374
+    value: 0.03740
   - errors:
     - {label: unc , value: 0.00266449 }
     - {label: add , value: 0.052      }
@@ -197,7 +197,7 @@ dependent_variables:
     - {label: unc , value: 0.000708702}
     - {label: add , value: 0.032      }
     - {label: mult, value: 0.04       }
-    value: 0.0365 
+    value: 0.03650
   - errors:
     - {label: unc , value: 0.00101202 }
     - {label: add , value: 0.032      }
@@ -217,7 +217,7 @@ dependent_variables:
     - {label: unc , value: 0.000683693}
     - {label: add , value: 0.032      }
     - {label: mult, value: 0.04       }
-    value: 0.0384  
+    value: 0.03840 
   - errors:
     - {label: unc , value: 0.00096139 }
     - {label: add , value: 0.033      }
@@ -242,7 +242,7 @@ dependent_variables:
     - {label: unc , value: 0.00121184 }
     - {label: add , value: 0.041      }
     - {label: mult, value: 0.04       }
-    value: 0.0451 
+    value: 0.04510 
   - errors:
     - {label: unc , value: 0.012416111}
     - {label: add , value: 0.046      }
@@ -352,7 +352,7 @@ dependent_variables:
     - {label: unc , value: 0.001314532}
     - {label: add , value: 0.034      }
     - {label: mult, value: 0.04       }
-    value: 0.0206 
+    value: 0.02060 
   - errors:
     - {label: unc , value: 0.00127431 }
     - {label: add , value: 0.034      }
@@ -362,7 +362,7 @@ dependent_variables:
     - {label: unc , value: 0.001110633}
     - {label: add , value: 0.033      }
     - {label: mult, value: 0.04       }
-    value: 0.0188 
+    value: 0.01880 
   - errors:
     - {label: unc , value: 0.001272392}
     - {label: add , value: 0.034      }
@@ -382,7 +382,7 @@ dependent_variables:
     - {label: unc , value: 0.001489265}
     - {label: add , value: 0.034      }
     - {label: mult, value: 0.04       }
-    value: 0.0246  
+    value: 0.02460  
   - errors:
     - {label: unc , value: 0.00122005 }
     - {label: add , value: 0.035      }
@@ -447,7 +447,7 @@ dependent_variables:
     - {label: unc , value: 0.000578481}
     - {label: add , value: 0.034      }
     - {label: mult, value: 0.04       }
-    value: 0.0278 
+    value: 0.02780 
   - errors:
     - {label: unc , value: 0.000563216}
     - {label: add , value: 0.032      }
@@ -527,7 +527,7 @@ dependent_variables:
     - {label: unc , value: 0.000666   }
     - {label: add , value: 0.029      }
     - {label: mult, value: 0.04       }
-    value: 0.0333 
+    value: 0.03330
   - errors:
     - {label: unc , value: 0.000789908}
     - {label: add , value: 0.031      }
@@ -622,7 +622,7 @@ dependent_variables:
     - {label: unc , value: 0.001265069}
     - {label: add , value: 0.035      }
     - {label: mult, value: 0.04       }
-    value: 0.02 
+    value: 0.02000 
   - errors:
     - {label: unc , value: 0.001215731}
     - {label: add , value: 0.035      }
@@ -647,7 +647,7 @@ dependent_variables:
     - {label: unc , value: 0.001461993}
     - {label: add , value: 0.033      }
     - {label: mult, value: 0.04       }
-    value: 0.0227 
+    value: 0.02270 
   - errors:
     - {label: unc , value: 0.001504902}
     - {label: add , value: 0.035      }
@@ -732,7 +732,7 @@ dependent_variables:
     - {label: unc , value: 0.001229446}
     - {label: add , value: 0.031      }
     - {label: mult, value: 0.04       }
-    value: 0.0242  
+    value: 0.02420  
   - errors:
     - {label: unc , value: 0.00525996 }
     - {label: add , value: 0.058      }
@@ -802,7 +802,7 @@ dependent_variables:
     - {label: unc , value: 0.001044696}
     - {label: add , value: 0.032      }
     - {label: mult, value: 0.04       }
-    value: 0.0287
+    value: 0.02870
   - errors:
     - {label: unc , value: 0.006544294}
     - {label: add , value: 0.064      }
@@ -877,7 +877,7 @@ dependent_variables:
     - {label: unc , value: 0.00122153 }
     - {label: add , value: 0.035      }
     - {label: mult, value: 0.04       }
-    value: 0.0284 
+    value: 0.02840 
   - errors:
     - {label: unc , value: 0.001401671}
     - {label: add , value: 0.033      }
@@ -897,7 +897,7 @@ dependent_variables:
     - {label: unc , value: 0.000968641}
     - {label: add , value: 0.035      }
     - {label: mult, value: 0.04       }
-    value: 0.0291 
+    value: 0.02910
   - errors:
     - {label: unc , value: 0.001200826}
     - {label: add , value: 0.03       }
@@ -957,22 +957,22 @@ dependent_variables:
     - {label: unc , value: 0.002191281}
     - {label: add , value: 0.085      }
     - {label: mult, value: 0.04       }
-    value: 0.0321  
+    value: 0.03210  
   - errors:    
     - {label: unc , value: 0.002018214}
     - {label: add , value: 0.088      }
     - {label: mult, value: 0.04       }
-    value: 0.0315 
+    value: 0.03150 
   - errors:
     - {label: unc , value: 0.001831815}
     - {label: add , value: 0.08       }
     - {label: mult, value: 0.04       }
-    value: 0.0211 
+    value: 0.02110 
   - errors:
     - {label: unc , value: 0.002700607}
     - {label: add , value: 0.096      }
     - {label: mult, value: 0.04       }
-    value: 0.0196 
+    value: 0.01960 
   - errors:
     - {label: unc , value: 0.005631701}
     - {label: add , value: 0.087      }
@@ -987,12 +987,12 @@ dependent_variables:
     - {label: unc , value: 0.004130819}
     - {label: add , value: 0.078      }
     - {label: mult, value: 0.04       }
-    value:  0.02418
+    value: 0.02418
   - errors:
     - {label: unc , value: 0.00343094 }
     - {label: add , value: 0.069      }
     - {label: mult, value: 0.04       }
-    value: 0.0203 
+    value: 0.02030 
   - errors:
     - {label: unc , value: 0.003190702}
     - {label: add , value: 0.068      }
@@ -1140,7 +1140,7 @@ dependent_variables:
     value: 0.03085
   - errors:
     - {label: unc , value: 0.00347618 }
-    - {label: add , value:  0.071     }
+    - {label: add , value: 0.071      }
     - {label: mult, value: 0.04       }
     value: 0.02592
   - errors:
@@ -1252,7 +1252,7 @@ dependent_variables:
     - {label: unc , value: 0.003836103}
     - {label: add , value: 0.066      }
     - {label: mult, value: 0.04       }
-    value: 0.0284
+    value: 0.02840
   - errors:
     - {label: unc , value: 0.008595086}
     - {label: add , value: 0.049      }
@@ -1287,7 +1287,7 @@ dependent_variables:
     - {label: unc , value: 0.006901237}
     - {label: add , value: 0.057      }
     - {label: mult, value: 0.04       }
-    value: 0.039
+    value: 0.03900
   - errors:
     - {label: unc , value: 0.005781714}
     - {label: add , value: 0.052      }
@@ -1347,57 +1347,57 @@ dependent_variables:
     - {label: unc , value: 0.004504551}
     - {label: add , value: 0.098      }
     - {label: mult, value: 0.04       }
-    value: 0.0361
+    value: 0.03610
   - errors:
     - {label: unc , value: 0.004002911}
-    - {label: add , value:  0.095     }
+    - {label: add , value: 0.095      }
     - {label: mult, value: 0.04       }
-    value: 0.0331
+    value: 0.03310
   - errors:
     - {label: unc , value: 0.003481015}
     - {label: add , value: 0.084      }
     - {label: mult, value: 0.04       }
-    value: 0.0283
+    value: 0.02830
   - errors:
     - {label: unc , value: 0.00382786 }
     - {label: add , value: 0.082      }
     - {label: mult, value: 0.04       }
-    value: 0.0309
+    value: 0.03090
   - errors:
     - {label: unc , value: 0.003929502}
     - {label: add , value: 0.101      }
     - {label: mult, value: 0.04       }
-    value: 0.0297
+    value: 0.02970
   - errors:
     - {label: unc , value: 0.004331708}
     - {label: add , value: 0.099      }
     - {label: mult, value: 0.04       }
-    value: 0.0322 
+    value: 0.03220 
   - errors:
     - {label: unc , value: 0.003829455}
     - {label: add , value: 0.082      }
     - {label: mult, value: 0.04       }
-    value: 0.0293
+    value: 0.02930
   - errors:
     - {label: unc , value: 0.003954234}
     - {label: add , value: 0.102      }
     - {label: mult, value: 0.04       }
-    value: 0.0289
+    value: 0.02890
   - errors:
     - {label: unc , value: 0.006713596}
     - {label: add , value: 0.103      }
     - {label: mult, value: 0.04       }
-    value: 0.0391
+    value: 0.03910
   - errors:
     - {label: unc , value: 0.00418161 }
     - {label: add , value: 0.116      }
     - {label: mult, value: 0.04       }
-    value: 0.0228
+    value: 0.02280
   - errors:
-    - {label: unc , value: 3.887536315}
-    - {label: add , value: 0.065      }
+    - {label: unc , value: 0.00642578 }
+    - {label: add , value: 0.128      }
     - {label: mult, value: 0.04       }
-    value: 11.1
+    value: 0.02140
 independent_variables:
   - header: {name: "z"}
 # z is considered as xp
@@ -2177,11 +2177,11 @@ independent_variables:
     - {value: 0.103122288}
     - {value: 0.064751204}
     - {value: 0.58668343 }
-    - {value: 0.006079489}
-    - {value: 0.005244131}
-    - {value: 0.005863584}
-    - {value: 0.005096199}
-    - {value: 0.004238234}
+    - {value: 0.357343544}
+    - {value: 0.231222293}
+    - {value: 0.145584407}
+    - {value: 0.091413465}
+    - {value: 0.058668343}
     - {value: 0.733354288}
     - {value: 0.44667943 }
     - {value: 0.289027866}

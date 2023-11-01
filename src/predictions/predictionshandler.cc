@@ -244,10 +244,10 @@ namespace MontBlanc
                     KiF3 += pow(as / apfel::FourPi, 2) * F3.C2.at(0);
                   }
                 // HH: for now multiply coefficient functions with flux factor
-                 const double fac = flux_factor.at(i);// HH
+                // const double fac = flux_factor.at(i);// HH
                 //  std::cout << "xPom is: "<< _bins[i].zav << " and flux is " << fac << std::endl;
-                KiF2 *= fac;// HH
-                KiFL *= fac;// HH
+                KiF2 *= flux_factor.at(i);// HH
+                KiFL *= flux_factor.at(i);// HH
                 // Convolute coefficient functions with the evolution
                 // operators for F2 and FL components
                 for (int j = 0; j < 13; j++)
