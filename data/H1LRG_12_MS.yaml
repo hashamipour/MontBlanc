@@ -1314,6 +1314,41 @@ dependent_variables:
     - {label: mult, value: 0.04       }
     value: 0.02698
   - errors:
+    - {label: unc, value: 0.012799761   }
+    - {label: add, value: 0.069         }
+    - {label: mult, value: 0.04       }
+    value: 0.03286
+  - errors:
+    - {label: unc, value: 0.006248136   }
+    - {label: add, value: 0.045         }
+    - {label: mult, value: 0.04       }
+    value: 0.03379
+  - errors:
+    - {label: unc, value: 0.005640327   }
+    - {label: add, value: 0.06         }
+    - {label: mult, value: 0.04       }
+    value: 0.03622
+  - errors:
+    - {label: unc, value: 0.004117027   }
+    - {label: add, value: 0.055         }
+    - {label: mult, value: 0.04       }
+    value: 0.02668
+  - errors:
+    - {label: unc, value: 0.005188794   }
+    - {label: add, value: 0.057         }
+    - {label: mult, value: 0.04       }
+    value: 0.03214
+  - errors:
+    - {label: unc, value: 0.0069172   }
+    - {label: add, value: 0.079         }
+    - {label: mult, value: 0.04       }
+    value: 0.02818
+  - errors:
+    - {label: unc, value:    }
+    - {label: add, value:          }
+    - {label: mult, value: 0.04       }
+    value: 
+  - errors:
     - {label: unc, value:    }
     - {label: add, value:          }
     - {label: mult, value: 0.04       }
@@ -1539,6 +1574,12 @@ independent_variables:
     - {value: 0.01  }
     - {value: 0.01  }
     - {value: 0.01  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
     - {value: 0.03  }
     - {value: 0.03  }
     - {value: 0.03  }
@@ -1870,6 +1911,12 @@ independent_variables:
     - {high: 0.217, low: 0.137, value: 0.17}
     - {high: 0.35, low: 0.217, value: 0.27}
     - {high: 0.55, low: 0.35, value: 0.43}
+    - {high: 0.087, low: 0.055, value: 0.067}
+    - {high: 0.137, low: 0.087, value: 0.11}
+    - {high: 0.217, low: 0.137, value: 0.17}
+    - {high: 0.35, low: 0.217, value: 0.27}
+    - {high: 0.55, low: 0.35, value: 0.43}
+    - {high: 0.867, low: 0.55, value: 0.67}
 
   - header: {name: "y"}
     values:
@@ -2133,6 +2180,16 @@ independent_variables:
     - {value: 0.115611147}
     - {value: 0.072792203}
     - {value: 0.045706732}
+    - {value: 0.440012573}
+    - {value: 0.268007658}
+    - {value: 0.17341672}
+    - {value: 0.109188305}
+    - {value: 0.068560099}
+    - {value: 0.044001257}
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
     - {value: }
     - {value: }
     - {value: }
@@ -2404,4 +2461,10 @@ independent_variables:
     - {value: 60.0 }      
     - {value: 60.0 }      
     - {value: 60.0 }       
-    - {value: 60.0 }                               
+    - {value: 60.0 }        
+    - {value: 90.0 }        
+    - {value: 90.0 }        
+    - {value: 90.0 }         
+    - {value: 90.0 }        
+    - {value: 90.0 }        
+    - {value: 90.0 }                                
