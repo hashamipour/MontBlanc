@@ -1344,40 +1344,60 @@ dependent_variables:
     - {label: mult, value: 0.04       }
     value: 0.02818
   - errors:
-    - {label: unc, value:    }
-    - {label: add, value:          }
+    - {label: unc, value: 0.004504551   }
+    - {label: add, value: 0.098         }
     - {label: mult, value: 0.04       }
-    value: 
+    value: 0.0361
   - errors:
-    - {label: unc, value:    }
-    - {label: add, value:          }
+    - {label: unc, value: 0.004002911   }
+    - {label: add, value:  0.095        }
     - {label: mult, value: 0.04       }
-    value: 
+    value: 0.0331
   - errors:
-    - {label: unc, value:    }
-    - {label: add, value:          }
+    - {label: unc, value: 0.003481015   }
+    - {label: add, value: 0.084         }
     - {label: mult, value: 0.04       }
-    value: 
+    value: 0.0283
   - errors:
-    - {label: unc, value:    }
-    - {label: add, value:          }
+    - {label: unc, value: 0.00382786   }
+    - {label: add, value: 0.082         }
     - {label: mult, value: 0.04       }
-    value: 
+    value: 0.0309
   - errors:
-    - {label: unc, value:    }
-    - {label: add, value:          }
+    - {label: unc, value: 0.003929502   }
+    - {label: add, value: 0.101         }
     - {label: mult, value: 0.04       }
-    value: 
+    value: 0.0297
   - errors:
-    - {label: unc, value:    }
-    - {label: add, value:          }
+    - {label: unc, value: 0.004331708   }
+    - {label: add, value: 0.099         }
     - {label: mult, value: 0.04       }
-    value: 
+    value: 0.0322 
   - errors:
-    - {label: unc, value:    }
-    - {label: add, value:          }
+    - {label: unc, value: 0.003829455   }
+    - {label: add, value: 0.082         }
     - {label: mult, value: 0.04       }
-    value: 
+    value: 0.0293
+  - errors:
+    - {label: unc, value: 0.003954234   }
+    - {label: add, value: 0.102         }
+    - {label: mult, value: 0.04       }
+    value: 0.0289
+  - errors:
+    - {label: unc, value: 0.006713596   }
+    - {label: add, value: 0.103         }
+    - {label: mult, value: 0.04       }
+    value: 0.0391
+  - errors:
+    - {label: unc, value: 0.00418161   }
+    - {label: add, value: 0.116         }
+    - {label: mult, value: 0.04       }
+    value: 0.0228
+  - errors:
+    - {label: unc, value: 3.887536315   }
+    - {label: add, value: 0.065         }
+    - {label: mult, value: 0.04       }
+    value: 11.1
 independent_variables:
   - header: {name: "z"}
 # z is considered as xp
@@ -1574,6 +1594,16 @@ independent_variables:
     - {value: 0.01  }
     - {value: 0.01  }
     - {value: 0.01  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
     - {value: 0.03  }
     - {value: 0.03  }
     - {value: 0.03  }
@@ -1917,7 +1947,17 @@ independent_variables:
     - {high: 0.35, low: 0.217, value: 0.27}
     - {high: 0.55, low: 0.35, value: 0.43}
     - {high: 0.867, low: 0.55, value: 0.67}
-
+    - {high: 0.137, low: 0.087, value: 0.11}
+    - {high: 0.217, low: 0.137, value: 0.17}
+    - {high: 0.35, low: 0.217, value: 0.27}
+    - {high: 0.55, low: 0.35, value: 0.43}
+    - {high: 0.867, low: 0.55, value: 0.67}
+    - {high: 0.35, low: 0.217, value: 0.27}
+    - {high: 0.55, low: 0.35, value: 0.43}
+    - {high: 0.867, low: 0.55, value: 0.67}
+    - {high: 0.55, low: 0.35, value: 0.43}
+    - {high: 0.867, low: 0.55, value: 0.67}
+    - {high: 0.867, low: 0.55, value: 0.67}
   - header: {name: "y"}
     values:
     - {value: 0.674398355}
@@ -2186,20 +2226,17 @@ independent_variables:
     - {value: 0.109188305}
     - {value: 0.068560099}
     - {value: 0.044001257}
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
+    - {value: 0.595572573}
+    - {value: 0.385370488}
+    - {value: 0.242640678}
+    - {value: 0.152355775}
+    - {value: 0.097780572}
+    - {value: 0.485281356}
+    - {value: 0.304711549}
+    - {value: 0.195561143}
+    - {value: 0.609423098}
+    - {value: 0.391122287}
+    - {value: 0.782244574}
   - header: {name: "Q2"}
     values: 
     - {value: 3.5  }  
@@ -2467,4 +2504,15 @@ independent_variables:
     - {value: 90.0 }         
     - {value: 90.0 }        
     - {value: 90.0 }        
-    - {value: 90.0 }                                
+    - {value: 90.0 }         
+    - {value: 200.0}         
+    - {value: 200.0}          
+    - {value: 200.0}          
+    - {value: 200.0}          
+    - {value: 200.0}          
+    - {value: 400.0}          
+    - {value: 400.0}          
+    - {value: 400.0}           
+    - {value: 800.0}            
+    - {value: 800.0}            
+    - {value: 1600.0}                        
