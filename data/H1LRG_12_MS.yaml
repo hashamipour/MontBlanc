@@ -1219,6 +1219,51 @@ dependent_variables:
     - {label: mult, value: 0.04       }
     value: 0.02562
   - errors:
+    - {label: unc, value: 0.010120055   }
+    - {label: add, value: 0.061         }
+    - {label: mult, value: 0.04       }
+    value: 0.05337
+  - errors:
+    - {label: unc, value: 0.005795747   }
+    - {label: add, value: 0.050         }
+    - {label: mult, value: 0.04       }
+    value: 0.04213
+  - errors:
+    - {label: unc, value: 0.005679632   }
+    - {label: add, value: 0.046         }
+    - {label: mult, value: 0.04       }
+    value: 0.04063
+  - errors:
+    - {label: unc, value: 0.004155871   }
+    - {label: add, value: 0.06         }
+    - {label: mult, value: 0.04       }
+    value: 0.03063
+  - errors:
+    - {label: unc, value: 0.004012628   }
+    - {label: add, value: 0.063         }
+    - {label: mult, value: 0.04       }
+    value: 0.02992
+  - errors:
+    - {label: unc, value: 0.003446116   }
+    - {label: add, value: 0.062         }
+    - {label: mult, value: 0.04       }
+    value: 0.02493
+  - errors:
+    - {label: unc, value: 0.003836103   }
+    - {label: add, value: 0.066         }
+    - {label: mult, value: 0.04       }
+    value: 0.0284
+  - errors:
+    - {label: unc, value:    }
+    - {label: add, value:          }
+    - {label: mult, value: 0.04       }
+    value: 
+  - errors:
+    - {label: unc, value:    }
+    - {label: add, value:          }
+    - {label: mult, value: 0.04       }
+    value: 
+  - errors:
     - {label: unc, value:    }
     - {label: add, value:          }
     - {label: mult, value: 0.04       }
@@ -1722,13 +1767,20 @@ independent_variables:
     - {high: 0.055, low: 0.035, value: 0.043}
     - {high: 0.087, low: 0.055, value: 0.067}
     - {high: 0.137, low: 0.087, value: 0.11}
-  - {high: 0.014, low: 0.009, value: 0.011}
-  - {high: 0.022, low: 0.014, value: 0.017}
-  - {high: 0.035, low: 0.022, value: 0.027}
-  - {high: 0.055, low: 0.035, value: 0.043}
-  - {high: 0.087, low: 0.055, value: 0.067}
-  - {high: 0.137, low: 0.087, value: 0.11}
-  - {high: 0.217, low: 0.137, value: 0.17}
+    - {high: 0.014, low: 0.009, value: 0.011}
+    - {high: 0.022, low: 0.014, value: 0.017}
+    - {high: 0.035, low: 0.022, value: 0.027}
+    - {high: 0.055, low: 0.035, value: 0.043}
+    - {high: 0.087, low: 0.055, value: 0.067}
+    - {high: 0.137, low: 0.087, value: 0.11}
+    - {high: 0.217, low: 0.137, value: 0.17}
+    - {high: 0.022, low: 0.014, value: 0.017}
+    - {high: 0.035, low: 0.022, value: 0.027}
+    - {high: 0.055, low: 0.035, value: 0.043}
+    - {high: 0.087, low: 0.055, value: 0.067}
+    - {high: 0.137, low: 0.087, value: 0.11}
+    - {high: 0.217, low: 0.137, value: 0.17}
+    - {high: 0.35, low: 0.217, value: 0.27}
   - header: {name: "y"}
     values:
     - {value: 0.674398355}
@@ -1972,13 +2024,13 @@ independent_variables:
     - {value: 0.122225715}
     - {value: 0.074446572}
     - {value: 0.048171311}
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
-    - {value: }
+    - {value: 0.674398355}
+    - {value: 0.424621186}
+    - {value: 0.266622605}
+    - {value: 0.171116}
+    - {value: 0.1042252}
+    - {value: 0.067439835}
+    - {value: 0.042462119}
   - header: {name: "Q2"}
     values: 
     - {value: 3.5  }  
