@@ -118,7 +118,7 @@ int main(int argc, char *argv[])
   apfel::EvolutionSetup es{};
 
   // Adjust evolution parameters
-  es.Virtuality        = apfel::EvolutionSetup::Virtuality::TIME;
+  es.Virtuality        = apfel::EvolutionSetup::Virtuality::SPACE;
   es.Q0                = config["Predictions"]["mu0"].as<double>();
   es.PerturbativeOrder = config["Predictions"]["perturbative order"].as<int>();
   es.QQCDRef           = config["Predictions"]["alphas"]["Qref"].as<double>();
