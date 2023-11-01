@@ -1059,108 +1059,108 @@ dependent_variables:
     - {label: mult, value: 0.04       }
     value: 0.02256
   - errors:
-    - {label: unc, value: 0.007918774   }
-    - {label: add, value: 0.088        }
+    - {label: unc, value: 0.007918774 }
+    - {label: add, value: 0.088       }
     - {label: mult, value: 0.04       }
     value: 0.03435 
   - errors:
-    - {label: unc, value: 0.004601707  }
-    - {label: add, value: 0.051        }
+    - {label: unc, value: 0.004601707 }
+    - {label: add, value: 0.051       }
     - {label: mult, value: 0.04       }
     value: 0.02474
   - errors:
-    - {label: unc, value: 0.004893461  }
-    - {label: add, value: 0.057        }
+    - {label: unc, value: 0.004893461 }
+    - {label: add, value: 0.057       }
     - {label: mult, value: 0.04       }
     value: 0.03042
   - errors:
-    - {label: unc, value: 0.004149245  }
-    - {label: add, value: 0.063        }
+    - {label: unc, value: 0.004149245 }
+    - {label: add, value: 0.063       }
     - {label: mult, value: 0.04       }
     value: 0.02617
   - errors:
-    - {label: unc, value: 0.004039249  }
-    - {label: add, value: 0.064        }
+    - {label: unc, value: 0.004039249 }
+    - {label: add, value: 0.064       }
     - {label: mult, value: 0.04       }
     value: 0.02631
   - errors:
-    - {label: unc, value: 0.004736023  }
-    - {label: add, value: 0.061        }
+    - {label: unc, value: 0.004736023 }
+    - {label: add, value: 0.061       }
     - {label: mult, value: 0.04       }
     value: 0.02782
   - errors:
-    - {label: unc, value: 0.007303934  }
-    - {label: add, value: 0.058        }
+    - {label: unc, value: 0.007303934 }
+    - {label: add, value: 0.058       }
     - {label: mult, value: 0.04       }
     value: 0.03331
   - errors:
-    - {label: unc, value: 0.006079489  }
-    - {label: add, value: 0.049        }
+    - {label: unc, value: 0.006079489 }
+    - {label: add, value: 0.049       }
     - {label: mult, value: 0.04       }
     value: 0.03641
   - errors:
-    - {label: unc, value: 0.005244131  }
-    - {label: add, value: 0.067        }
+    - {label: unc, value: 0.005244131 }
+    - {label: add, value: 0.067       }
     - {label: mult, value: 0.04       }
     value: 0.03224
   - errors:
-    - {label: unc, value: 0.005863584  }
-    - {label: add, value: 0.065        }
+    - {label: unc, value: 0.005863584 }
+    - {label: add, value: 0.065       }
     - {label: mult, value: 0.04       }
     value: 0.03637
   - errors:
-    - {label: unc, value: 0.005096199  }
-    - {label: add, value: 0.055        }
+    - {label: unc, value: 0.005096199 }
+    - {label: add, value: 0.055       }
     - {label: mult, value: 0.04       }
     value: 0.02906
   - errors:
-    - {label: unc, value: 0.004238234  }
-    - {label: add, value: 0.052        }
+    - {label: unc, value: 0.004238234 }
+    - {label: add, value: 0.052       }
     - {label: mult, value: 0.04       }
     value: 0.02413
   - errors:
-    - {label: unc, value: 0.009297591   }
-    - {label: add, value: 0.064         }
+    - {label: unc, value: 0.009297591 }
+    - {label: add, value: 0.064       }
     - {label: mult, value: 0.04       }
     value: 0.04792
   - errors:
-    - {label: unc, value: 0.00482211   }
-    - {label: add, value: 0.066         }
+    - {label: unc, value: 0.00482211  }
+    - {label: add, value: 0.066       }
     - {label: mult, value: 0.04       }
     value: 0.03531
   - errors:
-    - {label: unc, value: 0.004432528   }
-    - {label: add, value: 0.064         }
+    - {label: unc, value: 0.004432528 }
+    - {label: add, value: 0.064       }
     - {label: mult, value: 0.04       }
     value: 0.03527
   - errors:
-    - {label: unc, value: 0.004100382   }
-    - {label: add, value: 0.059         }
+    - {label: unc, value: 0.004100382 }
+    - {label: add, value: 0.059       }
     - {label: mult, value: 0.04       }
     value: 0.03085
   - errors:
-    - {label: unc, value: 0.00347618   }
-    - {label: add, value:  0.071        }
+    - {label: unc, value: 0.00347618  }
+    - {label: add, value:  0.071      }
     - {label: mult, value: 0.04       }
     value: 0.02592
   - errors:
-    - {label: unc, value: 0.003125449   }
-    - {label: add, value: 0.059         }
+    - {label: unc, value: 0.003125449 }
+    - {label: add, value: 0.059       }
     - {label: mult, value: 0.04       }
     value: 0.02366 
   - errors:
-    - {label: unc, value: 0.003127836   }
-    - {label: add, value: 0.064         }
+    - {label: unc, value: 0.003127836 }
+    - {label: add, value: 0.064       }
     - {label: mult, value: 0.04       }
     value: 0.02278
   - errors:
-    - {label: unc, value: 0.004973138   }
-    - {label: add, value: 0.072         }
+    - {label: unc, value: 0.004973138 }
+    - {label: add, value: 0.072       }
     - {label: mult, value: 0.04       }
     value: 0.03178
   - errors:
-    - {label: unc, value: 0.005396486   }
-    - {label: add, value: 0.062         }
+    - {label: unc, value: 0.005396486 }
+    - {label: add, value: 0.062       }
     - {label: mult, value: 0.04       }
     value: 0.03851
   - errors:
@@ -1218,6 +1218,76 @@ dependent_variables:
     - {label: add, value: 0.064       }
     - {label: mult, value: 0.04       }
     value: 0.02562
+  - errors:
+    - {label: unc, value: 0.010120055   }
+    - {label: add, value: 0.061         }
+    - {label: mult, value: 0.04       }
+    value: 0.05337
+  - errors:
+    - {label: unc, value: 0.005795747   }
+    - {label: add, value: 0.05         }
+    - {label: mult, value: 0.04       }
+    value: 0.04213
+  - errors:
+    - {label: unc, value: 0.005679632   }
+    - {label: add, value: 0.046         }
+    - {label: mult, value: 0.04       }
+    value: 0.04063
+  - errors:
+    - {label: unc, value: 0.004155871   }
+    - {label: add, value: 0.06         }
+    - {label: mult, value: 0.04       }
+    value: 0.03063
+  - errors:
+    - {label: unc, value: 0.004012628   }
+    - {label: add, value: 0.063         }
+    - {label: mult, value: 0.04       }
+    value: 0.02992
+  - errors:
+    - {label: unc, value: 0.003446116   }
+    - {label: add, value: 0.062         }
+    - {label: mult, value: 0.04       }
+    value: 0.02493
+  - errors:
+    - {label: unc, value: 0.003836103   }
+    - {label: add, value: 0.066         }
+    - {label: mult, value: 0.04       }
+    value: 0.0284
+  - errors:
+    - {label: unc, value:    }
+    - {label: add, value:          }
+    - {label: mult, value: 0.04       }
+    value: 
+  - errors:
+    - {label: unc, value:    }
+    - {label: add, value:          }
+    - {label: mult, value: 0.04       }
+    value: 
+  - errors:
+    - {label: unc, value:    }
+    - {label: add, value:          }
+    - {label: mult, value: 0.04       }
+    value: 
+  - errors:
+    - {label: unc, value:    }
+    - {label: add, value:          }
+    - {label: mult, value: 0.04       }
+    value: 
+  - errors:
+    - {label: unc, value:    }
+    - {label: add, value:          }
+    - {label: mult, value: 0.04       }
+    value: 
+  - errors:
+    - {label: unc, value:    }
+    - {label: add, value:          }
+    - {label: mult, value: 0.04       }
+    value: 
+  - errors:
+    - {label: unc, value:    }
+    - {label: add, value:          }
+    - {label: mult, value: 0.04       }
+    value: 
   - errors:
     - {label: unc, value:    }
     - {label: add, value:          }
@@ -1429,6 +1499,13 @@ independent_variables:
     - {value: 0.01  }
     - {value: 0.01  }
     - {value: 0.01  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
+    - {value: 0.03  }
     - {value: 0.03  }
     - {value: 0.03  }
     - {value: 0.03  }
@@ -1715,13 +1792,20 @@ independent_variables:
     - {high: 0.055, low: 0.035, value: 0.043}
     - {high: 0.087, low: 0.055, value: 0.067}
     - {high: 0.137, low: 0.087, value: 0.11}
-  - {high: 0.014, low: 0.009, value: 0.011}
-  - {high: 0.022, low: 0.014, value: 0.017}
-  - {high: 0.035, low: 0.022, value: 0.027}
-  - {high: 0.055, low: 0.035, value: 0.043}
-  - {high: 0.087, low: 0.055, value: 0.067}
-  - {high: 0.137, low: 0.087, value: 0.11}
-  - {high: 0.217, low: 0.137, value: 0.17}
+    - {high: 0.014, low: 0.009, value: 0.011}
+    - {high: 0.022, low: 0.014, value: 0.017}
+    - {high: 0.035, low: 0.022, value: 0.027}
+    - {high: 0.055, low: 0.035, value: 0.043}
+    - {high: 0.087, low: 0.055, value: 0.067}
+    - {high: 0.137, low: 0.087, value: 0.11}
+    - {high: 0.217, low: 0.137, value: 0.17}
+    - {high: 0.022, low: 0.014, value: 0.017}
+    - {high: 0.035, low: 0.022, value: 0.027}
+    - {high: 0.055, low: 0.035, value: 0.043}
+    - {high: 0.087, low: 0.055, value: 0.067}
+    - {high: 0.137, low: 0.087, value: 0.11}
+    - {high: 0.217, low: 0.137, value: 0.17}
+    - {high: 0.35, low: 0.217, value: 0.27}
   - header: {name: "y"}
     values:
     - {value: 0.674398355}
@@ -1965,6 +2049,20 @@ independent_variables:
     - {value: 0.122225715}
     - {value: 0.074446572}
     - {value: 0.048171311}
+    - {value: 0.674398355}
+    - {value: 0.424621186}
+    - {value: 0.266622605}
+    - {value: 0.171116}
+    - {value: 0.1042252}
+    - {value: 0.067439835}
+    - {value: 0.042462119}
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
+    - {value: }
     - {value: }
     - {value: }
     - {value: }
@@ -2214,4 +2312,11 @@ independent_variables:
     - {value: 25.0 }   
     - {value: 25.0 }     
     - {value: 25.0 }   
-    - {value: 25.0 }                   
+    - {value: 25.0 }   
+    - {value: 35.0 }     
+    - {value: 35.0 }      
+    - {value: 35.0 }     
+    - {value: 35.0 }      
+    - {value: 35.0 }     
+    - {value: 35.0 }      
+    - {value: 35.0 }                        
