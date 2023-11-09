@@ -14,396 +14,141 @@ dependent_variables:
     - {name: charge                         , value: 1    }
   values:
   - errors:
-    - {label: unc , value: 0.004538332}
-    - {label: add , value: 0.065      }
+    - {label: unc , value: 0.003930299 }
+    - {label: add , value: 0.152       }
     - {label: mult, value: 0.04       }
-    value: 0.02481
+    value: 0.0175 
   - errors:
-    - {label: unc , value: 0.001021762}
-    - {label: add , value: 0.047      }
+    - {label: unc , value: 0.004705001 }
+    - {label: add , value: 0.095       }
     - {label: mult, value: 0.04       }
-    value: 0.02327
+    value: 0.0302 
   - errors:
-    - {label: unc , value: 0.001465982}
-    - {label: add , value: 0.039      }
+    - {label: unc , value: 0.007697782 }
+    - {label: add , value: 0.087      }
     - {label: mult, value: 0.04       }
-    value: 0.0372
+    value: 0.0448 
   - errors:
-    - {label: unc , value: 0.002029752}
-    - {label: add , value: 0.045      }
+    - {label: unc , value: 0.011842767 }
+    - {label: add , value: 0.148       }
     - {label: mult, value: 0.04       }
-    value: 0.0488
+    value: 0.064 
   - errors:
-    - {label: unc , value: 0.001926894}
-    - {label: add , value: 0.052      }  
+    - {label: unc , value: 0.002562968 }
+    - {label: add , value: 0.149       }
     - {label: mult, value: 0.04       }
-    value: 0.03142
+    value: 0.0185 
   - errors:
-    - {label: unc , value: 0.002021615}
-    - {label: add , value: 0.042      }
-    - {label: mult, value: 0.04       }
-    value: 0.04465
-  - errors:
-    - {label: unc , value: 0.002781072}
-    - {label: add , value: 0.047      }
-    - {label: mult, value: 0.04       }
-    value: 0.05977
-  - errors:
-    - {label: unc , value: 0.002983752}
-    - {label: add , value: 0.051      }
-    - {label: mult, value: 0.04       }
-    value: 0.05005
-  - errors:
-    - {label: unc , value: 0.003684146}
-    - {label: add , value: 0.048      }
-    - {label: mult, value: 0.04       }
-    value: 0.06865
-  - errors:
-    - {label: unc , value: 0.006828211}
+    - {label: unc , value: 0.001304472 }
     - {label: add , value: 0.063      }
     - {label: mult, value: 0.04       }
-    value: 0.03764
+    value: 0.012 
   - errors:
-    - {label: unc , value: 0.004363909}
-    - {label: add , value: 0.05       }
+    - {label: unc , value: 0.00123834 }
+    - {label: add , value: 0.053       }
     - {label: mult, value: 0.04       }
-    value: 0.06919
+    value: 0.0132 
   - errors:
-    - {label: unc , value: 0.00121288 }
-    - {label: add , value: 0.05       }
+    - {label: unc , value: 0.000906111 }
+    - {label: add , value: 0.04       }
     - {label: mult, value: 0.04       }
-    value: 0.06314
+    value: 0.0135 
   - errors:
-    - {label: unc , value: 0.003050737}
-    - {label: add , value: 0.073      }
+    - {label: unc , value: 0.001812031 }
+    - {label: add , value: 0.054      }
     - {label: mult, value: 0.04       }
-    value: 0.01945
+    value: 0.0188 
   - errors:
-    - {label: unc , value: 0.000975807}
-    - {label: add , value: 0.051      }
+    - {label: unc , value: 0.004538999 }
+    - {label: add , value: 0.079       }
     - {label: mult, value: 0.04       }
-    value: 0.02203
+    value: 0.0261 
   - errors:
-    - {label: unc , value: 0.000887895}
-    - {label: add , value: 0.042      }
+    - {label: unc , value: 0.002763655 }
+    - {label: add , value: 0.066       }
     - {label: mult, value: 0.04       }
-    value: 0.02087
+    value: 0.0219 
   - errors:
-    - {label: unc , value: 0.000930865}
-    - {label: add , value: 0.041      }
-    - {label: mult, value: 0.04       }
-    value: 0.02188
-  - errors:
-    - {label: unc , value: 0.001067318}
+    - {label: unc , value: 0.001711477 }
     - {label: add , value: 0.039      }
     - {label: mult, value: 0.04       }
-    value: 0.02622
+    value: 0.019 
   - errors:
-    - {label: unc , value: 0.001789586}
-    - {label: add , value: 0.033      }
+    - {label: unc , value: 0.001635751 }
+    - {label: add , value: 0.031       }
     - {label: mult, value: 0.04       }
-    value: 0.02897
+    value: 0.023 
   - errors:
-    - {label: unc , value: 0.003640834}
-    - {label: add , value: 0.046      }
+    - {label: unc , value: 0.001019258 }
+    - {label: add , value: 0.026       }
     - {label: mult, value: 0.04       }
-    value: 0.04622
+    value: 0.0251 
   - errors:
-    - {label: unc , value: 0.001696699}
-    - {label: add , value: 0.043      }
+    - {label: unc , value: 0.001006571 }
+    - {label: add , value: 0.028      }
     - {label: mult, value: 0.04       }
-    value: 0.02777
+    value: 0.0262 
   - errors:
-    - {label: unc , value: 0.001132144}
-    - {label: add , value: 0.043      }
+    - {label: unc , value: 0.00126244 }
+    - {label: add , value: 0.026       }
     - {label: mult, value: 0.04       }
-    value: 0.02411
+    value: 0.0317 
   - errors:
-    - {label: unc , value: 0.001117192}
-    - {label: add , value: 0.041      }
+    - {label: unc , value: 0.002247064 }
+    - {label: add , value: 0.046       }
     - {label: mult, value: 0.04       }
-    value: 0.02495
+    value: 0.0403 
+  - errors:
+    - {label: unc , value: 0.006232739 }
+    - {label: add , value: 0.07      }
+    - {label: mult, value: 0.04       }
+    value: 0.0202 
+  - errors:
+    - {label: unc , value: 0.00339763 }
+    - {label: add , value: 0.031       }
+    - {label: mult, value: 0.04       }
+    value: 0.0355
+  - errors:
+    - {label: unc , value: 0.00255918 }
+    - {label: add , value: 0.036       }
+    - {label: mult, value: 0.04       }
+    value: 0.0327 
+  - errors:
+    - {label: unc , value: 0.001781882 }
+    - {label: add , value: 0.055      }
+    - {label: mult, value: 0.04       }
+    value: 0.0387 
+  - errors:
+    - {label: unc , value: 0.00077074 }
+    - {label: add , value: 0.099      }
+    - {label: mult, value: 0.04       }
+    value: 0.0157 
 independent_variables:
   - header: {name: "z"}
 # z is considered as xp
     values:
-    - {value: 0.0003}
-    - {value: 0.0003}
-    - {value: 0.0003}
-    - {value: 0.0003}
-    - {value: 0.0003}
-    - {value: 0.0003}
-    - {value: 0.0003}
-    - {value: 0.0003}
-    - {value: 0.0003}
-    - {value: 0.0003}
-    - {value: 0.0003}
-    - {value: 0.0003}
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.001 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 } 
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.003 }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.01  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
-    - {value: 0.03  }
+    - {value: 0.0005}
+    - {value: 0.0005}
+    - {value: 0.0005}
+    - {value: 0.0005}
+    - {value: 0.0005}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
   - header: {name: "x"}
 # x is considered as Beta
     values:
