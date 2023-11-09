@@ -1,0 +1,215 @@
+dependent_variables:
+- header: {title: XP*SIG(C=REDUCED)}
+  qualifiers:
+    - {name: process                        , value: DIS  }
+    - {name: observable, value: NC reduced dsigma/dxdQ2   }
+    - {name: target_isoscalarity            , value: 1    }
+    - {name: prefactor                      , value: 1    }
+    - {name: Vs                             , value: 252.0}
+    - {name: Q, low: 2  , high: 6.633, integrate: false  }
+    - {name: x, low: 0.186, high: 0.88   , integrate: false  }
+    - {name: z, low: 0.0005, high: 0.003  , integrate: false  }
+    - {name: PS_reduction, W: 5, ymin: 0.16, ymax: 0.67     }
+    - {name: hadron                         , value: PR   }
+    - {name: charge                         , value: 1    }
+  values:
+  - errors:
+    - {label: unc , value: 0.005081475  }
+    - {label: add , value: 0.164        }
+    - {label: mult, value: 0.04       }
+    value: 0.0192
+  - errors:
+    - {label: unc , value: 0.004747297  }
+    - {label: add , value: 0.113        }
+    - {label: mult, value: 0.04       }
+    value: 0.0269
+  - errors:
+    - {label: unc , value: 0.007742875  }
+    - {label: add , value: 0.137        }
+    - {label: mult, value: 0.04       }
+    value: 0.0456
+  - errors:
+    - {label: unc , value: 0.009093922  }
+    - {label: add , value: 0.102        }
+    - {label: mult, value: 0.04       }
+    value: 0.0498
+  - errors:
+    - {label: unc , value: 0.002479864  }
+    - {label: add , value: 0.108        }
+    - {label: mult, value: 0.04       }
+    value: 0.0189
+  - errors:
+    - {label: unc , value: 0.001261222  }
+    - {label: add , value: 0.043        }
+    - {label: mult, value: 0.04       }
+    value: 0.0159
+  - errors:
+    - {label: unc , value: 0.00174558  }
+    - {label: add , value: 0.045        }
+    - {label: mult, value: 0.04       }
+    value: 0.0164
+  - errors:
+    - {label: unc , value: 0.001323752  }
+    - {label: add , value: 0.047        }
+    - {label: mult, value: 0.04       }
+    value: 0.016
+  - errors:
+    - {label: unc , value: 0.002575523  }
+    - {label: add , value: 0.056        }
+    - {label: mult, value: 0.04       }
+    value: 0.0171
+  - errors:
+    - {label: unc , value: 0.004368683  }
+    - {label: add , value: 0.092        }
+    - {label: mult, value: 0.04       }
+    value: 0.0115
+  - errors:
+    - {label: unc , value: 0.002177411  }
+    - {label: add , value: 0.032        }
+    - {label: mult, value: 0.04       }
+    value: 0.0222
+  - errors:
+    - {label: unc , value: 0.00185099  }
+    - {label: add , value: 0.029        }
+    - {label: mult, value: 0.04       }
+    value: 0.0227
+  - errors:
+    - {label: unc , value: 0.001832681  }
+    - {label: add , value: 0.026        }
+    - {label: mult, value: 0.04       }
+    value: 0.0256
+  - errors:
+    - {label: unc , value: 0.001198578  }
+    - {label: add , value: 0.028        }
+    - {label: mult, value: 0.04       }
+    value: 0.0288
+  - errors:
+    - {label: unc , value: 0.001192513  }
+    - {label: add , value: 0.026        }
+    - {label: mult, value: 0.04       }
+    value: 0.0281
+  - errors:
+    - {label: unc , value: 0.001363792  }
+    - {label: add , value: 0.03        }
+    - {label: mult, value: 0.04       }
+    value: 0.0284
+  - errors:
+    - {label: unc , value: 0.003533451  }
+    - {label: add , value: 0.026        }
+    - {label: mult, value: 0.04       }
+    value: 0.0379
+  - errors:
+    - {label: unc , value: 0.003042384  }
+    - {label: add , value: 0.031        }
+    - {label: mult, value: 0.04       }
+    value: 0.035
+  - errors:
+    - {label: unc , value: 0.002634955  }
+    - {label: add , value: 0.04        }
+    - {label: mult, value: 0.04       }
+    value: 0.0316
+  - errors:
+    - {label: unc , value: 0.001978458  }
+    - {label: add , value: 0.056        }
+    - {label: mult, value: 0.04       }
+    value: 0.0412
+  - errors:
+    - {label: unc , value: 0.000807923  }
+    - {label: add , value: 0.098        }
+    - {label: mult, value: 0.04       }
+    value: 0.0148
+independent_variables:
+  - header: {name: "z"}
+# z is considered as xp
+    values:
+    - {value: 0.0005}
+    - {value: 0.0005}
+    - {value: 0.0005}
+    - {value: 0.0005}
+    - {value: 0.0005}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+    - {value: 0.003}
+  - header: {name: "x"}
+# x is considered as Beta
+    values:
+    - {value: 0.186}
+    - {value: 0.227}
+    - {value: 0.57}
+    - {value: 0.699}
+    - {value: 0.88}
+    - {value: 0.033}
+    - {value: 0.041}
+    - {value: 0.054}
+    - {value: 0.085}
+    - {value: 0.125}
+    - {value: 0.089}
+    - {value: 0.101}
+    - {value: 0.117}
+    - {value: 0.155}
+    - {value: 0.244}
+    - {value: 0.361}
+    - {value: 0.341}
+    - {value: 0.386}
+    - {value: 0.446}
+    - {value: 0.592}
+    - {value: 0.88}
+  - header: {name: "y"}
+    values:
+    - {value: 0.677292024}
+    - {value: 0.554961746}
+    - {value: 0.635406859}
+    - {value: 0.518142932}
+    - {value: 0.411570352}
+    - {value: 0.636244022}
+    - {value: 0.512098847}
+    - {value: 0.388815792}
+    - {value: 0.247012385}
+    - {value: 0.167968422}
+    - {value: 0.678243277}
+    - {value: 0.597659917}
+    - {value: 0.515928646}
+    - {value: 0.389442914}
+    - {value: 0.247392015}
+    - {value: 0.167212331}
+    - {value: 0.677292024}
+    - {value: 0.598333109}
+    - {value: 0.517839866}
+    - {value: 0.390129358}
+    - {value: 0.262450659}
+  - header: {name: "Q2"}
+    values: 
+    - {value: 4.0  } 
+    - {value: 4.0  } 
+    - {value: 11.5 }
+    - {value: 11.5 }
+    - {value: 11.5 } 
+    - {value: 4.0  } 
+    - {value: 4.0  } 
+    - {value: 4.0  } 
+    - {value: 4.0  } 
+    - {value: 4.0  }  
+    - {value: 11.5 }
+    - {value: 11.5 }
+    - {value: 11.5 }  
+    - {value: 11.5 }
+    - {value: 11.5 }
+    - {value: 11.5 } 
+    - {value: 44.0 } 
+    - {value: 44.0 } 
+    - {value: 44.0 } 
+    - {value: 44.0 } 
+    - {value: 44.0 }
