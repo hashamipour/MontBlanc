@@ -5,7 +5,7 @@ dependent_variables:
     - {name: observable, value: NC reduced dsigma/dxdQ2   }
     - {name: target_isoscalarity            , value: 1    }
     - {name: prefactor                      , value: 1    }
-    - {name: Vs                             , value: 319.0}
+    - {name: Vs                             , value: 101761.0}
     - {name: Q, low: 3.391  , high: 6.633, integrate: false  }
     - {name: x, low: 0.089, high: 0.88   , integrate: false  }
     - {name: z, low: 0.0005, high: 0.003  , integrate: false  }
@@ -90,23 +90,23 @@ independent_variables:
     - {value: 0.0005}
     - {value: 0.0005}
     - {value: 0.0005}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
   - header: {name: "x"}
 # x is considered as Beta
     values:
-    - {value: 0.57}
+    - {value: 0.57 }
     - {value: 0.699}
-    - {value: 0.88}
+    - {value: 0.88 }
     - {value: 0.089}
     - {value: 0.101}
     - {value: 0.117}
@@ -117,10 +117,10 @@ independent_variables:
     - {value: 0.386}
     - {value: 0.446}
     - {value: 0.592}
-    - {value: 0.88}
+    - {value: 0.88 }
   - header: {name: "y"}
     values:
-    - {value: 0.39652595}
+    - {value: 0.39652595 }
     - {value: 0.323347341}
     - {value: 0.256840672}
     - {value: 0.423258036}
@@ -132,7 +132,7 @@ independent_variables:
     - {value: 0.422664407}
     - {value: 0.373390059}
     - {value: 0.323158212}
-    - {value: 0.24346041}
+    - {value: 0.24346041 }
     - {value: 0.163782458}
   - header: {name: "Q2"}
     values:

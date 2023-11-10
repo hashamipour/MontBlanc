@@ -5,7 +5,7 @@ dependent_variables:
     - {name: observable, value: NC reduced dsigma/dxdQ2   }
     - {name: target_isoscalarity            , value: 1    }
     - {name: prefactor                      , value: 1    }
-    - {name: Vs                             , value: 225.0}
+    - {name: Vs                             , value: 50625.0}
     - {name: Q, low: 2  , high: 6.633, integrate: false  }
     - {name: x, low: 0.227, high: 0.88   , integrate: false  }
     - {name: z, low: 0.0005, high: 0.003  , integrate: false  }
@@ -132,31 +132,31 @@ independent_variables:
     - {value: 0.0005}
     - {value: 0.0005}
     - {value: 0.0005}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
-    - {value: 0.003}
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
+    - {value: 0.003 }
   - header: {name: "x"}
 # x is considered as Beta
     values:
     - {value: 0.227}
     - {value: 0.323}
-    - {value: 0.57}
+    - {value: 0.57 }
     - {value: 0.699}
-    - {value: 0.88}
+    - {value: 0.88 }
     - {value: 0.033}
     - {value: 0.041}
     - {value: 0.054}
@@ -173,21 +173,21 @@ independent_variables:
     - {value: 0.386}
     - {value: 0.446}
     - {value: 0.592}
-    - {value: 0.88}
+    - {value: 0.88 }
   - header: {name: "y"}
     values:
     - {value: 0.696144015}
     - {value: 0.489240531}
     - {value: 0.797054364}
     - {value: 0.649958494}
-    - {value: 0.51627385}
+    - {value: 0.51627385 }
     - {value: 0.798104502}
     - {value: 0.642376794}
     - {value: 0.487730529}
     - {value: 0.309852336}
     - {value: 0.210699588}
     - {value: 0.850788366}
-    - {value: 0.7497046}
+    - {value: 0.7497046  }
     - {value: 0.647180894}
     - {value: 0.488517191}
     - {value: 0.310328543}
