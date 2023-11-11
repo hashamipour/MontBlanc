@@ -11,8 +11,7 @@ namespace MontBlanc
 {
   //_________________________________________________________________________
   NNADparameterisation::NNADparameterisation(YAML::Node const &config,
-                                             std::shared_ptr<const apfel::Grid> g,
-                                             std::vector<std::pair<NangaParbat::DataHandler*, NangaParbat::ConvolutionTable*>> DSVect):// HH
+                                             std::shared_ptr<const apfel::Grid> g):
     NangaParbat::Parameterisation("NNAD", 2, {}, false),
     _NNarchitecture(config["architecture"].as<std::vector<int>>()),
     _NN(new nnad::FeedForwardNN<double>(_NNarchitecture, config["seed"].as<int>(), false)),

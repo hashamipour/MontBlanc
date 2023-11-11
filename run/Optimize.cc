@@ -214,7 +214,7 @@ int main(int argc, char *argv[])
     }
 
   // NN Parameterisation
-  NangaParbat::Parameterisation *NN_FFs = new MontBlanc::NNADparameterisation(config["NNAD"], g, DSVect);
+  NangaParbat::Parameterisation *NN_FFs = new MontBlanc::NNADparameterisation(config["NNAD"], g);
 
   // Initialiase chi2 objects for training and validation
   MontBlanc::AnalyticChiSquare *chi2t = new MontBlanc::AnalyticChiSquare{DSVectt, NN_FFs};

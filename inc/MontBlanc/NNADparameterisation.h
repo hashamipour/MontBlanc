@@ -23,8 +23,7 @@ namespace MontBlanc
      * @brief The "NNADparameterisation" constructor
      */
     NNADparameterisation(YAML::Node const &config,
-                         std::shared_ptr<const apfel::Grid> g,
-                         std::vector<std::pair<NangaParbat::DataHandler*, NangaParbat::ConvolutionTable*>> DSVect); // HH
+                         std::shared_ptr<const apfel::Grid> g);
 
     std::vector<double> GetParameters() const { return _pars; }
     int GetParameterNumber()            const { return _Np; }
