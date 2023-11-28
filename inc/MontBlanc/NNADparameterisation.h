@@ -34,7 +34,8 @@ namespace MontBlanc
       _NN->SetParameters(pars);
     };
 
-    void EvaluateOnGrid();
+    void EvaluateOnGrid(double const &xPom);
+    std::vector<double> FractureFuncFluxFactor();
     void DeriveOnGrid();
 
     std::function<apfel::Set<apfel::Distribution>(double const&)> DistributionFunction() const;

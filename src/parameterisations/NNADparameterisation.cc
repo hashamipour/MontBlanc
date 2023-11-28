@@ -52,7 +52,7 @@ namespace MontBlanc
   }
 
   //_________________________________________________________________________
-  void NNADparameterisation::EvaluateOnGrid()
+  void NNADparameterisation::EvaluateOnGrid(double const& xPom)
   {
     const std::vector<double> nn1 = _NN->Evaluate({1});
     const std::function<std::vector<double>(double const&)> NormNN = [=] (double const& x) -> std::vector<double>
@@ -66,8 +66,8 @@ namespace MontBlanc
       // If _OutputFunction == 2 square the output vector.
       if (_OutputFunction == 2)
         std::transform(nnx.begin(), nnx.end(), nnx.begin(), nnx.begin(), std::multiplies<double>());
-
-      return nnx;
+      double flux_factor = FractureFuncFluxFactor( &xPom) ;
+      return flux_factor * nnx; // HH: TODO: improve by using std::transform
     };
 
     const apfel::Set<apfel::Distribution> outputs{apfel::DiagonalBasis{_Nout}, DistributionMap(*_g, NormNN, _Nout)};
@@ -127,5 +127,20 @@ namespace MontBlanc
   std::function<apfel::Set<apfel::Distribution>(double const&)> NNADparameterisation::DistributionDerivative(int ipar) const
   {
     return [=] (double const &) -> apfel::Set<apfel::Distribution> { return _NNderivativeSets[ipar+1]; };
+  }
+    //_________________________________________________________________________
+  double NNADparameterisation::FractureFuncFluxFactor(double const& xPom){
+  double res;
+  // HH: fixed from Khanpour2019
+  double w1   = -1.191 ;
+  // double w2   = 0.000 ;
+  double w3   = 86.156;
+  double w4   = 1.773 ;
+
+     //HH: using "z" instead of xpom, so we don't need to change DataHendler class
+    res = xPom * pow(xPom, w1 )*(1 + w3 * pow(xPom, w4)) ;
+     // an additional "xPom" is multiplied to get  "xPom*XSection"
+  
+  return res;
   }
 }

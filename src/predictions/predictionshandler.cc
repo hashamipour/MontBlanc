@@ -186,7 +186,7 @@ namespace MontBlanc
         const auto FLObjCCMinus = apfel::InitializeFLCCMinusObjectsZM(*_g, _Thresholds);
         const auto F3ObjCCMinus = apfel::InitializeF3CCMinusObjectsZM(*_g, _Thresholds);
 
-        const std::vector<double> flux_factor = FractureFuncFluxFactor();// HH
+        // const std::vector<double> flux_factor = FractureFuncFluxFactor();// HH
         // Loop on the bins
         for (int i = 0; i < (int) _bins.size(); i++)
           {
@@ -246,8 +246,8 @@ namespace MontBlanc
                 // HH: for now multiply coefficient functions with flux factor
                 // const double fac = flux_factor.at(i);// HH
                 //  std::cout << "xPom is: "<< _bins[i].zav << " and flux is " << fac << std::endl;
-                KiF2 *= flux_factor.at(i);// HH
-                KiFL *= flux_factor.at(i);// HH
+                // KiF2 *= flux_factor.at(i);// HH
+                // KiFL *= flux_factor.at(i);// HH
                 // Convolute coefficient functions with the evolution
                 // operators for F2 and FL components
                 for (int j = 0; j < 13; j++)
@@ -742,23 +742,7 @@ namespace MontBlanc
     _D = apfel::Set<apfel::Distribution> {InDistFunc(_mu0)};
 
   }
-  //_________________________________________________________________________
-  std::vector<double> PredictionsHandler::FractureFuncFluxFactor(){
-  std::vector<double> res;
-  double xPom; // HH: fixed from Khanpour2019
-  double w1   = -1.191 ;
-  // double w2   = 0.000 ;
-  double w3   = 86.156;
-  double w4   = 1.773 ;
-  
-  for (int i = 0; i < (int) _bins.size(); i++)
-  {
-    xPom = _bins[i].zav; //HH: using "z" instead of xpom, so we don't need to change DataHendler class
-    res.push_back( xPom * pow(xPom, w1 )*(1 + w3 * pow(xPom, w4)) );// an additional "xPom" is multiplied to get  "xPom*XSection"
-  };
-  
-  return res;
-  }
+
 
   //_________________________________________________________________________
   std::vector<double> PredictionsHandler::GetPredictions(std::function<double(double const&, double const&, double const&)> const&) const

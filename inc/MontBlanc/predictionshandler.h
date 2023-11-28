@@ -41,7 +41,7 @@ namespace MontBlanc
      */
     void SetInputFFs(std::function<apfel::Set<apfel::Distribution>(double const&)> const& InDistFunc);
     void SetInputPDFs(std::function<apfel::Set<apfel::Distribution>(double const&)> const& InDistFunc);//HH
-    std::vector<double> FractureFuncFluxFactor();
+    
     /**
      * @brief Overload function of the NangaParbat::ConvolutionTable
      * class
