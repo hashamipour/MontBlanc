@@ -11,7 +11,7 @@ namespace MontBlanc
 {
   //_________________________________________________________________________
   NNADparameterisation::NNADparameterisation(YAML::Node const &config,
-                                             std::shared_ptr<const apfel::Grid> g):
+                                             std::shared_ptr<const apfel::Grid> g, double const& xPom):
     NangaParbat::Parameterisation("NNAD", 2, {}, false),
     _NNarchitecture(config["architecture"].as<std::vector<int>>()),
     _NN(new nnad::FeedForwardNN<double>(_NNarchitecture, config["seed"].as<int>(), false)),
@@ -19,7 +19,8 @@ namespace MontBlanc
     _Np(_NN->GetParameterNumber()),
     _OutputFunction(config["output function"] ? config["output function"].as<int>() : 1),
     _g(g),
-    _NNderivativeSets(_Np + 1, apfel::Set<apfel::Distribution> {apfel::DiagonalBasis{13}, std::map<int, apfel::Distribution>{}})
+    _NNderivativeSets(_Np + 1, apfel::Set<apfel::Distribution> {apfel::DiagonalBasis{13}, std::map<int, apfel::Distribution>{}}),
+    _xPom(xPom)
   {
     this->_pars = _NN->GetParameters();
 
@@ -52,7 +53,7 @@ namespace MontBlanc
   }
 
   //_________________________________________________________________________
-  void NNADparameterisation::EvaluateOnGrid(double const& xPom)
+  void NNADparameterisation::EvaluateOnGrid()
   {
     const std::vector<double> nn1 = _NN->Evaluate({1});
     const std::function<std::vector<double>(double const&)> NormNN = [=] (double const& x) -> std::vector<double>
@@ -63,11 +64,17 @@ namespace MontBlanc
       // Subtract the NN at 1 to ensure NN(x = 1) = 0.
       std::transform(nnx.begin(), nnx.end(), nn1.begin(), nnx.begin(), std::minus<double>());
 
+      // Multiply each element in dnnx by the constant multiplier
+      double flux_factor = FractureFuncFluxFactor() ;
+      std::transform(nnx.begin(), nnx.end(), nnx.begin(), [flux_factor](double element) {
+        return element * flux_factor;
+      });
+
       // If _OutputFunction == 2 square the output vector.
       if (_OutputFunction == 2)
         std::transform(nnx.begin(), nnx.end(), nnx.begin(), nnx.begin(), std::multiplies<double>());
-      double flux_factor = FractureFuncFluxFactor( &xPom) ;
-      return flux_factor * nnx; // HH: TODO: improve by using std::transform
+
+      return nnx;
     };
 
     const apfel::Set<apfel::Distribution> outputs{apfel::DiagonalBasis{_Nout}, DistributionMap(*_g, NormNN, _Nout)};
@@ -129,7 +136,7 @@ namespace MontBlanc
     return [=] (double const &) -> apfel::Set<apfel::Distribution> { return _NNderivativeSets[ipar+1]; };
   }
     //_________________________________________________________________________
-  double NNADparameterisation::FractureFuncFluxFactor(double const& xPom){
+  double NNADparameterisation::FractureFuncFluxFactor(){
   double res;
   // HH: fixed from Khanpour2019
   double w1   = -1.191 ;
@@ -138,7 +145,7 @@ namespace MontBlanc
   double w4   = 1.773 ;
 
      //HH: using "z" instead of xpom, so we don't need to change DataHendler class
-    res = xPom * pow(xPom, w1 )*(1 + w3 * pow(xPom, w4)) ;
+    res = _xPom * pow(_xPom, w1 )*(1 + w3 * pow(_xPom, w4)) ;
      // an additional "xPom" is multiplied to get  "xPom*XSection"
   
   return res;

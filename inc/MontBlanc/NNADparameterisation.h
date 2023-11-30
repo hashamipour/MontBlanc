@@ -24,6 +24,8 @@ namespace MontBlanc
      */
     NNADparameterisation(YAML::Node const &config,
                          std::shared_ptr<const apfel::Grid> g);
+    NNADparameterisation(YAML::Node const &config,
+                         std::shared_ptr<const apfel::Grid> g, double const& xPom);
 
     std::vector<double> GetParameters() const { return _pars; }
     int GetParameterNumber()            const { return _Np; }
@@ -34,8 +36,8 @@ namespace MontBlanc
       _NN->SetParameters(pars);
     };
 
-    void EvaluateOnGrid(double const &xPom);
-    std::vector<double> FractureFuncFluxFactor();
+    void EvaluateOnGrid();
+    double FractureFuncFluxFactor();
     void DeriveOnGrid();
 
     std::function<apfel::Set<apfel::Distribution>(double const&)> DistributionFunction() const;
@@ -50,6 +52,7 @@ namespace MontBlanc
     std::shared_ptr<const apfel::Grid>           _g;
     nnad::Matrix<double>                         _Rotation;
     std::vector<apfel::Set<apfel::Distribution>> _NNderivativeSets;
+    double                                       _xPom;
     // NangaParbat::DataHandler                    *_DH;  // HH
   };
 }
